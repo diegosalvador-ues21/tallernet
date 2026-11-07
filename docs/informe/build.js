@@ -231,7 +231,7 @@ const doc = new Document({
     ],
   },
   numbering: { config: [{ reference: 'vinetas', levels: [{ level: 0, format: LevelFormat.BULLET, text: '•', alignment: AlignmentType.LEFT,
-    style: { paragraph: { indent: { left: 567, hanging: 283 } } } }] }] },
+    style: { run: { font: FONT }, paragraph: { indent: { left: 567, hanging: 283 } } } }] }] },
   sections: secciones(),
 });
 

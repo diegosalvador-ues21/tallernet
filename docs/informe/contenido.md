@@ -812,7 +812,7 @@ WIDTHS: 9,17,39,35
 | DEF-36 | Revisión independiente | El CHECK de la base admitía precio 0, que el modelo rechaza desde DEF-29. | CHECK (precio_base > 0) en el script 01. CPI06. |
 | H-28 | Relevamiento de conexiones | Workbench consultaba el servidor del puerto 3306, no la base del prototipo. Es un hallazgo de entorno, no un defecto del código. | Conexión documentada en la guía de puesta en marcha; la opción 6 › 1 del programa muestra el servidor real. |
 
-La suite pasó de 64 a 193 pruebas en nueve niveles: unitario, componente con dobles de prueba, propiedades (jqwik), arquitectura (ArchUnit), integración con la base de desarrollo, integración aislada (Testcontainers), sistema en proceso, punta a punta con expect y regresión de las sesiones s01 a s14. La primera medición, con 120 pruebas, mostró que los controladores (19 %) y la vista (32 %) casi no se ejercitaban; las pruebas nuevas cubrieron esos huecos (Tabla 25 y Figura 36).
+La suite, escrita con JUnit 5 (JUnit Team, 2024), pasó de 64 a 193 pruebas en nueve niveles: unitario, componente con dobles de prueba, propiedades (jqwik), arquitectura (ArchUnit), integración con la base de desarrollo, integración aislada (Testcontainers), sistema en proceso, punta a punta con expect y regresión de las sesiones s01 a s14. La primera medición, con 120 pruebas, mostró que los controladores (19 %) y la vista (32 %) casi no se ejercitaban; las pruebas nuevas cubrieron esos huecos (Tabla 25 y Figura 36).
 
 TABLA: Métricas de la suite: inicio de la campaña y versión 2
 WIDTHS: 40,20,20,20
