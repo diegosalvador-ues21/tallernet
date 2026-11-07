@@ -1,0 +1,31 @@
+#!/usr/bin/expect -f
+# CPE2E-03 - Se detiene MySQL justo antes de confirmar un alta de cliente: el programa informa
+# [SIN CONEXIÓN], aclara que no se guardó nada y el menú sigue.
+# Uso: expect servidor_detenido_en_alta.exp <jar> <db.properties> <comando para detener> <comando para iniciar>
+set timeout 60
+set jar [lindex $argv 0]
+set cfg [lindex $argv 1]
+set detener [lindex $argv 2]
+set iniciar [lindex $argv 3]
+spawn java -Dtallernet.config=$cfg -Dtallernet.datos=/tmp/tallernet_e2e -jar $jar
+set app $spawn_id
+expect -i $app "empleado: " { send -i $app "2\r" }
+expect -i $app "opción: "   { send -i $app "2\r" }
+expect -i $app "opción: "   { send -i $app "1\r" }
+expect -i $app "Nombre: "   { send -i $app "Ana\r" }
+expect -i $app "Apellido: " { send -i $app "Corte\r" }
+expect -i $app "Teléfono: " { send -i $app "11-4444-7777\r" }
+expect -i $app "(opcional): "
+exec sh -c $detener
+send -i $app "\r"
+set ok 0
+expect {
+    -i $app "SIN CONEXIÓN" { set ok [expr {$ok + 1}]; exp_continue }
+    -i $app "no se guardó ningún dato" { set ok [expr {$ok + 1}] }
+    -i $app timeout { puts "\nTIMEOUT"; exec sh -c $iniciar; exit 2 }
+}
+expect -i $app "opción: " { send -i $app "0\r" }
+expect -i $app "opción: " { send -i $app "0\r" }
+expect -i $app eof
+exec sh -c $iniciar
+if {$ok == 2} { puts "\nRESULTADO CPE2E-03: APROBADO"; exit 0 } else { puts "\nRESULTADO CPE2E-03: FALLADO"; exit 1 }

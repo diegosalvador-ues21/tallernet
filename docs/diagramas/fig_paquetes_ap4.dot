@@ -1,0 +1,22 @@
+digraph G {
+  graph [fontname="Carlito", fontsize=11, rankdir=TB, nodesep=0.35, ranksep=0.55, bgcolor="white", pad=0.2];
+  node [shape=plaintext, fontname="Carlito", fontsize=10, fontcolor="#212121"];
+  edge [fontname="Carlito", fontsize=9, color="#616161", fontcolor="#616161"];
+  node [shape=tab, style=filled, fillcolor="#e0f2f1", color="#004d40", fontcolor="#212121", fontsize=11];
+  vista [label="vista\nVistaConsola, LectorEntrada"];
+  controlador [label="controlador\nTurnoControlador, ValidadorTurno, SesionControlador, ClienteControlador,\nCatalogoControlador, ArchivoControlador, SistemaControlador"];
+  persistencia [label="persistencia\nDao<T,K>, repositorios, DaoJdbc (plantilla),\nTraductorSQLException, DAOs"];
+  archivos [label="archivos (AP4)\nExportador<T>, ExportadorCsv<T>, AgendaCsv,\nReporteSemanalTxt, ImportadorClientesCsv, Bitacora", fillcolor="#fff8e1"];
+  conexion [label="conexion\nConexionBD (Singleton)"];
+  modelo [label="modelo\nPersona, Cliente, Empleado, Sede, Vehiculo,\nServicio (+2), Turno, AgendaDiaria, ReporteSemanal"];
+  excepciones [label="excepciones\nTallerNetException y 8 subclases"];
+  util [label="util\nOrdenamiento, Busqueda, Formatos"];
+  db [shape=cylinder, fillcolor="white", label="MySQL 8.0\nbase tallernet"];
+  fs [shape=folder, fillcolor="white", label="Archivos\nexportaciones/*.csv, *.txt\nlogs/tallernet.log"];
+  vista -> controlador; controlador -> persistencia; controlador -> archivos; persistencia -> conexion;
+  conexion -> db [label=" JDBC / TLS"]; archivos -> fs [label=" java.nio.file"];
+  controlador -> modelo [style=dashed]; persistencia -> modelo [style=dashed]; archivos -> modelo [style=dashed];
+  controlador -> util [style=dashed]; vista -> excepciones [style=dashed]; persistencia -> excepciones [style=dashed];
+  archivos -> excepciones [style=dashed]; vista -> modelo [style=dashed]; vista -> util [style=dashed];
+  {rank=same; modelo; util; excepciones}
+}

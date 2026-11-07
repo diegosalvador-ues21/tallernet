@@ -1,0 +1,8 @@
+# TALLERNET - configuración de la conexión a la base central (copiar como db.properties)
+# Desarrollo local: MySQL 8.0 en el mismo equipo, con TLS obligatorio (RNF-TN09).
+db.url=jdbc:mysql://localhost:3306/tallernet?sslMode=REQUIRED&characterEncoding=UTF-8
+db.usuario=tallernet_app
+db.clave=Tallernet.App.2026
+
+# Producción (AP2, sección 10): servidor central en la red VPN, con verificación del certificado.
+# db.url=jdbc:mysql://10.8.0.1:3306/tallernet?sslMode=VERIFY_CA&trustCertificateKeyStoreUrl=file:/opt/tallernet/truststore.jks&characterEncoding=UTF-8

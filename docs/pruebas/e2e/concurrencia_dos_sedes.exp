@@ -1,0 +1,46 @@
+#!/usr/bin/expect -f
+# CPE2E-01 - Dos recepcionistas (Echeandía y Flores) reservan la MISMA franja de la sede 1 al
+# mismo tiempo, con el programa real. Esperado: exactamente un turno confirmado y el otro
+# rechazado por superposición (S5) con sugerencia de horario.
+# Uso: expect concurrencia_dos_sedes.exp <jar> <db.properties> <fecha dd/mm/aaaa>
+set timeout 30
+set jar [lindex $argv 0]
+set cfg [lindex $argv 1]
+set fecha [lindex $argv 2]
+
+proc preparar {empleado patente} {
+    global jar cfg fecha
+    spawn java -Dtallernet.config=$cfg -Dtallernet.datos=/tmp/tallernet_e2e -jar $jar
+    set id $spawn_id
+    expect -i $id "empleado: "             { send -i $id "$empleado\r" }
+    expect -i $id "opción: "               { send -i $id "1\r" }
+    expect -i $id "opción: "               { send -i $id "1\r" }
+    expect -i $id "Sede: "                 { send -i $id "1\r" }
+    expect -i $id "vehículo: "             { send -i $id "$patente\r" }
+    expect -i $id "Servicio: "             { send -i $id "1\r" }
+    expect -i $id "aaaa): "                { send -i $id "$fecha\r" }
+    expect -i $id "(HH:mm): "              { send -i $id "10:00\r" }
+    expect -i $id "(opcional): "
+    return $id
+}
+
+set a [preparar 2 AE123BC]
+set b [preparar 3 AC456DE]
+# Ambas sesiones confirman en el mismo instante.
+send -i $a "\r"
+send -i $b "\r"
+
+set confirmados 0
+set rechazados 0
+foreach id [list $a $b] {
+    expect {
+        -i $id -re {Turno N.° [0-9]+ CONFIRMADO} { incr confirmados }
+        -i $id "\[S5\]" { incr rechazados }
+        -i $id timeout { puts "\nTIMEOUT"; exit 2 }
+    }
+    expect -i $id "opción: " { send -i $id "0\r" }
+    expect -i $id "opción: " { send -i $id "0\r" }
+    expect -i $id eof
+}
+puts "\nRESULTADO CPE2E-01: confirmados=$confirmados rechazados=$rechazados"
+if {$confirmados == 1 && $rechazados == 1} { puts "APROBADO"; exit 0 } else { puts "FALLADO"; exit 1 }

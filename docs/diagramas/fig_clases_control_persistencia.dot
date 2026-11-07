@@ -1,0 +1,35 @@
+digraph G {
+  graph [fontname="Carlito", fontsize=11, rankdir=TB, nodesep=0.35, ranksep=0.55, bgcolor="white", pad=0.2];
+  node [shape=plaintext, fontname="Carlito", fontsize=10, fontcolor="#212121"];
+  edge [fontname="Carlito", fontsize=9, color="#616161", fontcolor="#616161"];
+  Dao [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#fff8e1" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«interface»</FONT><BR/><I>Dao&lt;T, K&gt;</I></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ insertar(T): K<BR/>+ listar(): List&lt;T&gt;<BR/>+ buscarPorId(K): Optional&lt;T&gt;</TD></TR></TABLE>>];
+  TurnoRepo [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#fff8e1" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«interface»</FONT><BR/><I>TurnoRepositorio</I></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ insertarSiDisponible(Turno): int<BR/>+ reprogramarSiDisponible(Turno)<BR/>+ reconfirmarSiDisponible(Turno)<BR/>+ cambiarEstado(int, esperado, nuevo)<BR/>+ listarAgenda(int, LocalDate)<BR/>+ historialPorPatente(String)<BR/>+ resumenPorSede()</TD></TR></TABLE>>];
+  VehRepo [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#fff8e1" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«interface»</FONT><BR/><I>VehiculoRepositorio</I></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ buscarPorPatente(String)<BR/>+ listarOrdenadoPorPatente()</TD></TR></TABLE>>];
+  DaoJdbc [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="#fff8e1" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«abstract»</FONT><BR/><I>DaoJdbc</I></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT"># abrir(): Connection<BR/># error(String, SQLException)<BR/># mapearSede / mapearVehiculo<BR/># mapearServicio (DEF-02)</TD></TR></TABLE>>];
+  TurnoDAO [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><B>TurnoDAO</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">- prepararTransaccion(...)  READ COMMITTED<BR/>- bloquearAgendaDeSede(...)  FOR UPDATE<BR/>- verificarDisponibilidad(...)<BR/>+ insertarSiDisponible(Turno): int</TD></TR></TABLE>>];
+  OtrosDAO [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><B>ClienteDAO · VehiculoDAO · ServicioDAO<BR/>SedeDAO · EmpleadoDAO</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">implementan Dao&lt;T, Integer&gt;</TD></TR></TABLE>>];
+  Conexion [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«singleton»</FONT><BR/><B>ConexionBD</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">- <U>instancia: ConexionBD</U><BR/>- url, usuario, clave</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ <U>getInstancia(): ConexionBD</U><BR/>+ getConexion(): Connection</TD></TR></TABLE>>];
+  TC [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«control»</FONT><BR/><B>TurnoControlador</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">- colaRecepcion: Queue&lt;Turno&gt;<BR/>- cancelacionesRecientes: Deque&lt;Turno&gt;</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ registrarTurno(...): Turno<BR/>+ reprogramarTurno / cancelarTurno<BR/>+ deshacerUltimaCancelacion()<BR/>+ registrarLlegada / atenderSiguiente</TD></TR></TABLE>>];
+  VT [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«control»</FONT><BR/><B>ValidadorTurno</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">- reloj: Clock</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ validarHora(String): LocalTime<BR/>+ validarFranja(Sede, LocalTime, Servicio)<BR/>+ validarTodo(...): LocalDateTime</TD></TR></TABLE>>];
+  CC [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«control»</FONT><BR/><B>ClienteControlador · CatalogoControlador<BR/>SesionControlador</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ listarClientes(criterio)<BR/>+ buscarVehiculoPorPatente(String)<BR/>+ estimarProximosServices()<BR/>+ listarHabilitados() / iniciarSesion(int)</TD></TR></TABLE>>];
+  Vista [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«boundary»</FONT><BR/><B>VistaConsola</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">- ejecutar(Accion)  ← captura excepciones<BR/>- menuPrincipal() / menuTurnos() ...</TD></TR></TABLE>>];
+  TNE [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«exception»</FONT><BR/><B>TallerNetException</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">extends Exception</TD></TR></TABLE>>];
+  TIE [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«exception»</FONT><BR/><B>TurnoInvalidoException</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT"> </TD></TR></TABLE>>];
+  TSE [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«exception»</FONT><BR/><B>TurnoSuperpuestoException</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">- turnoExistenteId: int</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT"> </TD></TR></TABLE>>];
+  OtrasExc [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white" COLOR="#9e9e9e"><TR><TD BGCOLOR="#004d40"><FONT COLOR="white"><FONT POINT-SIZE="9">«exception»</FONT><BR/><B>DatoInvalidoException · PersistenciaException<BR/>EntidadNoEncontradaException</B></FONT></TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT"> </TD></TR></TABLE>>];
+  TurnoRepo -> Dao [arrowhead=empty];
+  VehRepo -> Dao [arrowhead=empty];
+  TurnoDAO -> TurnoRepo [arrowhead=empty, style=dashed];
+  TurnoDAO -> DaoJdbc [arrowhead=empty];
+  OtrosDAO -> DaoJdbc [arrowhead=empty];
+  OtrosDAO -> Dao [arrowhead=empty, style=dashed];
+  DaoJdbc -> Conexion [arrowhead=vee, style=dashed, label=" usa"];
+  Vista -> TC [arrowhead=vee];
+  Vista -> CC [arrowhead=vee];
+  TC -> VT [arrowhead=vee];
+  TC -> TurnoRepo [arrowhead=vee, style=dashed, label=" depende de"];
+  CC -> Dao [arrowhead=vee, style=dashed];
+  TIE -> TNE [arrowhead=empty];
+  TSE -> TIE [arrowhead=empty];
+  OtrasExc -> TNE [arrowhead=empty];
+}

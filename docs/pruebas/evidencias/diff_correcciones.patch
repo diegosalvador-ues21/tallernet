@@ -1,0 +1,655 @@
+diff --git a/db/01_ddl_creacion.sql b/db/01_ddl_creacion.sql
+index 2d50f42..be2b19c 100644
+--- a/db/01_ddl_creacion.sql
++++ b/db/01_ddl_creacion.sql
+@@ -75,7 +75,7 @@ CREATE TABLE servicio (
+     km_servicio   INT            NULL COMMENT 'Intervalo de kilometraje recomendado para el servicio (NULL si no aplica)',
+     CONSTRAINT pk_servicio PRIMARY KEY (servicio_id),
+     CONSTRAINT uq_servicio_descripcion UNIQUE (descripcion),
+-    CONSTRAINT ck_servicio_precio CHECK (precio_base >= 0),
++    CONSTRAINT ck_servicio_precio CHECK (precio_base > 0),
+     CONSTRAINT ck_servicio_duracion CHECK (duracion_min > 0),
+     CONSTRAINT ck_servicio_km CHECK (km_servicio IS NULL OR km_servicio > 0)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+diff --git a/src/main/java/tallernet/Main.java b/src/main/java/tallernet/Main.java
+index 5e7e3fa..e11aa7a 100644
+--- a/src/main/java/tallernet/Main.java
++++ b/src/main/java/tallernet/Main.java
+@@ -23,7 +23,6 @@ import java.io.PrintStream;
+ import java.nio.charset.Charset;
+ import java.nio.charset.StandardCharsets;
+ import java.nio.file.Path;
+-import java.sql.Connection;
+ import java.time.Clock;
+ import java.time.LocalDateTime;
+ import java.time.ZoneId;
+@@ -87,13 +86,7 @@ public final class Main {
+     }
+ 
+     private static void verificarConexion() throws PersistenciaException {
+-        try (Connection con = ConexionBD.getInstancia().getConexion()) {
+-            if (!con.isValid(5)) {
+-                throw new PersistenciaException("La base de datos no respondió a tiempo.", null);
+-            }
+-        } catch (java.sql.SQLException e) {
+-            throw new PersistenciaException("No se pudo verificar la conexión: " + e.getMessage(), e);
+-        }
++        ConexionBD.getInstancia().verificar();
+     }
+ 
+     /**
+diff --git a/src/main/java/tallernet/archivos/AgendaCsv.java b/src/main/java/tallernet/archivos/AgendaCsv.java
+index cf6d011..2efb136 100644
+--- a/src/main/java/tallernet/archivos/AgendaCsv.java
++++ b/src/main/java/tallernet/archivos/AgendaCsv.java
+@@ -1,5 +1,6 @@
+ package tallernet.archivos;
+ 
++import java.util.Locale;
+ import tallernet.modelo.AgendaDiaria;
+ import tallernet.modelo.Turno;
+ import tallernet.util.Formatos;
+@@ -21,7 +22,7 @@ public class AgendaCsv extends ExportadorCsv<AgendaDiaria> {
+     public String nombreArchivo(AgendaDiaria agenda) {
+         // Sin tildes ni espacios: el nombre de archivo debe ser válido en cualquier sistema (DEF-16).
+         String sede = Normalizer.normalize(agenda.getSede().getNombre().replaceFirst("^Sede ", ""), Normalizer.Form.NFD)
+-                .replaceAll("\\p{M}", "").replaceAll("[^A-Za-z0-9]+", "_").toLowerCase();
++                .replaceAll("\\p{M}", "").replaceAll("[^A-Za-z0-9]+", "_").toLowerCase(Locale.ROOT);
+         return "agenda_" + sede + "_" + agenda.getFecha() + ".csv";
+     }
+ 
+diff --git a/src/main/java/tallernet/archivos/ImportadorClientesCsv.java b/src/main/java/tallernet/archivos/ImportadorClientesCsv.java
+index cc031d3..b86b6d8 100644
+--- a/src/main/java/tallernet/archivos/ImportadorClientesCsv.java
++++ b/src/main/java/tallernet/archivos/ImportadorClientesCsv.java
+@@ -1,5 +1,6 @@
+ package tallernet.archivos;
+ 
++import java.util.Locale;
+ import tallernet.excepciones.ArchivoException;
+ import tallernet.excepciones.TallerNetException;
+ import tallernet.modelo.Cliente;
+@@ -54,7 +55,7 @@ public class ImportadorClientesCsv {
+                 numero++;
+                 if (numero == 1) {
+                     linea = linea.replace("﻿", ""); // BOM que agrega Excel
+-                    if (linea.toLowerCase().startsWith("nombre")) {
++                    if (linea.toLowerCase(Locale.ROOT).startsWith("nombre")) {
+                         continue; // encabezado
+                     }
+                 }
+diff --git a/src/main/java/tallernet/conexion/ConexionBD.java b/src/main/java/tallernet/conexion/ConexionBD.java
+index 36812f0..c0a81c1 100644
+--- a/src/main/java/tallernet/conexion/ConexionBD.java
++++ b/src/main/java/tallernet/conexion/ConexionBD.java
+@@ -1,7 +1,9 @@
+ package tallernet.conexion;
+ 
++import java.io.Reader;
+ import tallernet.excepciones.ConexionException;
+ import tallernet.excepciones.PersistenciaException;
++import tallernet.modelo.InfoConexion;
+ import java.io.IOException;
+ import java.io.InputStream;
+ import java.io.InputStreamReader;
+@@ -53,11 +55,6 @@ public final class ConexionBD {
+         instancia = new ConexionBD(props);
+     }
+ 
+-    /** Datos de la conexión vigente, para la opción «Probar conexión» del menú Sistema. */
+-    public record InfoConexion(String servidor, String usuario, String motor, String driver, String cifrado,
+-                               long milisegundos) {
+-    }
+-
+     /**
+      * Abre una conexión nueva. Quien la pide la cierra con try-with-resources.
+      * Un error de comunicación (SQLState 08xxx), de credenciales o de TLS se informa como
+@@ -76,6 +73,20 @@ public final class ConexionBD {
+         }
+     }
+ 
++    /**
++     * Verifica al iniciar que el servidor central responda (antes, en Main, que dependía de java.sql;
++     * DEF-31). Lanza ConexionException con la indicación de qué revisar.
++     */
++    public void verificar() throws PersistenciaException {
++        try (Connection con = getConexion()) {
++            if (!con.isValid(5)) {
++                throw new ConexionException("El servidor central no respondió a tiempo.", null);
++            }
++        } catch (SQLException e) {
++            throw new ConexionException("No se pudo verificar la conexión con el servidor central.", e);
++        }
++    }
++
+     /**
+      * Abre una conexión, consulta la versión del motor y el cifrado negociado, y mide el tiempo.
+      * Sirve para diagnosticar desde la sede si el problema es la red o la aplicación.
+@@ -85,7 +96,11 @@ public final class ConexionBD {
+         try (Connection con = getConexion();
+              Statement st = con.createStatement();
+              ResultSet rs = st.executeQuery("SHOW SESSION STATUS LIKE 'Ssl_cipher'")) {
+-            String cifrado = rs.next() && !rs.getString(2).isBlank() ? "TLS (" + rs.getString(2) + ")" : "sin cifrar";
++            String valor = null;
++            if (rs.next()) {
++                valor = rs.getString(2);
++            }
++            String cifrado = valor != null && !valor.isBlank() ? "TLS (" + valor + ")" : "sin cifrar";
+             DatabaseMetaData meta = con.getMetaData();
+             long ms = (System.nanoTime() - inicio) / 1_000_000;
+             return new InfoConexion(servidor(), usuario, meta.getDatabaseProductName() + " "
+@@ -115,12 +130,13 @@ public final class ConexionBD {
+                 }
+                 return props;
+             }
+-            try (InputStream in = ConexionBD.class.getClassLoader().getResourceAsStream(ARCHIVO)) {
+-                if (in == null) {
+-                    throw new PersistenciaException("No se encontró " + ARCHIVO
+-                            + ". Copie db.properties.example como db.properties y complete los datos.", null);
+-                }
+-                props.load(new InputStreamReader(in, StandardCharsets.UTF_8));
++            InputStream in = ConexionBD.class.getClassLoader().getResourceAsStream(ARCHIVO);
++            if (in == null) {
++                throw new PersistenciaException("No se encontró " + ARCHIVO
++                        + ". Copie db.properties.example como db.properties y complete los datos.", null);
++            }
++            try (Reader lector = new InputStreamReader(in, StandardCharsets.UTF_8)) {
++                props.load(lector);
+                 return props;
+             }
+         } catch (IOException e) {
+diff --git a/src/main/java/tallernet/controlador/CatalogoControlador.java b/src/main/java/tallernet/controlador/CatalogoControlador.java
+index 14c5b2b..18fe644 100644
+--- a/src/main/java/tallernet/controlador/CatalogoControlador.java
++++ b/src/main/java/tallernet/controlador/CatalogoControlador.java
+@@ -96,6 +96,12 @@ public class CatalogoControlador {
+         return turnos.resumenPorSede();
+     }
+ 
++    /** Servicio por número; la vista lo muestra antes de pedir el precio nuevo (DEF-26). */
++    public Servicio buscarServicio(int servicioId) throws TallerNetException {
++        return servicios.buscarPorId(servicioId)
++                .orElseThrow(() -> new EntidadNoEncontradaException("No existe el servicio N.° " + servicioId + "."));
++    }
++
+     /**
+      * Actualiza el precio base de un servicio del catálogo (UPDATE, TP4). Acepta "52000",
+      * "52.000" o "52.000,50" (punto de miles y coma decimal, como se escribe en Argentina).
+diff --git a/src/main/java/tallernet/controlador/SistemaControlador.java b/src/main/java/tallernet/controlador/SistemaControlador.java
+index 72590b4..40bcd40 100644
+--- a/src/main/java/tallernet/controlador/SistemaControlador.java
++++ b/src/main/java/tallernet/controlador/SistemaControlador.java
+@@ -3,6 +3,7 @@ package tallernet.controlador;
+ import tallernet.archivos.Bitacora;
+ import tallernet.conexion.ConexionBD;
+ import tallernet.excepciones.TallerNetException;
++import tallernet.modelo.InfoConexion;
+ import java.util.List;
+ 
+ /** Opciones de soporte del menú Sistema: diagnóstico de la conexión y consulta de la bitácora. */
+@@ -15,7 +16,7 @@ public class SistemaControlador {
+     }
+ 
+     /** Prueba la conexión con el servidor central y devuelve versión, cifrado y tiempo de respuesta. */
+-    public ConexionBD.InfoConexion probarConexion() throws TallerNetException {
++    public InfoConexion probarConexion() throws TallerNetException {
+         return ConexionBD.getInstancia().diagnosticar();
+     }
+ 
+diff --git a/src/main/java/tallernet/controlador/TurnoControlador.java b/src/main/java/tallernet/controlador/TurnoControlador.java
+index 5ffe6f2..8421212 100644
+--- a/src/main/java/tallernet/controlador/TurnoControlador.java
++++ b/src/main/java/tallernet/controlador/TurnoControlador.java
+@@ -237,6 +237,24 @@ public class TurnoControlador {
+         return List.copyOf(colaRecepcion);
+     }
+ 
++    /**
++     * Validación temprana para la vista (DEF-26): cada dato del alta de turno se verifica apenas se
++     * ingresa, antes de pedir el siguiente. El alta vuelve a verificarlos dentro de registrarTurno.
++     */
++    public Sede verificarSede(int sedeId) throws TallerNetException {
++        return buscarSede(sedeId);
++    }
++
++    /** Vehículo de la patente indicada (normalizada), o EntidadNoEncontradaException. */
++    public Vehiculo verificarVehiculo(String patente) throws TallerNetException {
++        return buscarVehiculo(patente);
++    }
++
++    /** Servicio del catálogo, o EntidadNoEncontradaException. */
++    public Servicio verificarServicio(int servicioId) throws TallerNetException {
++        return buscarServicio(servicioId);
++    }
++
+     private Sede buscarSede(int sedeId) throws TallerNetException {
+         return sedes.buscarPorId(sedeId)
+                 .filter(Sede::isActiva)
+diff --git a/src/main/java/tallernet/modelo/Cliente.java b/src/main/java/tallernet/modelo/Cliente.java
+index 47525d3..f1d49bd 100644
+--- a/src/main/java/tallernet/modelo/Cliente.java
++++ b/src/main/java/tallernet/modelo/Cliente.java
+@@ -1,5 +1,6 @@
+ package tallernet.modelo;
+ 
++import java.util.Locale;
+ import tallernet.excepciones.DatoInvalidoException;
+ import java.time.LocalDateTime;
+ import java.util.regex.Pattern;
+@@ -65,7 +66,7 @@ public class Cliente extends Persona {
+         if (email.strip().length() > LARGO_EMAIL || !EMAIL.matcher(email.strip()).matches()) {
+             throw new DatoInvalidoException("El correo electrónico no tiene un formato válido.");
+         }
+-        this.email = email.strip().toLowerCase();
++        this.email = email.strip().toLowerCase(Locale.ROOT);
+     }
+ 
+     public LocalDateTime getFechaAlta() {
+diff --git a/src/main/java/tallernet/modelo/InfoConexion.java b/src/main/java/tallernet/modelo/InfoConexion.java
+new file mode 100644
+index 0000000..1b36b2d
+--- /dev/null
++++ b/src/main/java/tallernet/modelo/InfoConexion.java
+@@ -0,0 +1,10 @@
++package tallernet.modelo;
++
++/**
++ * Datos de la conexión vigente con el servidor central, para la opción «Probar conexión».
++ * Vive en el modelo (y no en el paquete conexion) para que la vista no dependa de la capa de
++ * acceso a datos (DEF-31, detectado por ArchUnit).
++ */
++public record InfoConexion(String servidor, String usuario, String motor, String driver, String cifrado,
++                           long milisegundos) {
++}
+diff --git a/src/main/java/tallernet/modelo/Servicio.java b/src/main/java/tallernet/modelo/Servicio.java
+index b57c632..3902ab3 100644
+--- a/src/main/java/tallernet/modelo/Servicio.java
++++ b/src/main/java/tallernet/modelo/Servicio.java
+@@ -83,6 +83,10 @@ public abstract class Servicio {
+         if (precio == null || precio.signum() < 0) {
+             throw new DatoInvalidoException("El precio base no puede ser negativo.");
+         }
++        if (precio.signum() == 0) {
++            // DEF-29: un precio en cero suele ser un error de tipeo y deja el servicio sin cobrar.
++            throw new DatoInvalidoException("El precio base debe ser mayor que cero.");
++        }
+         if (precio.scale() > 2 || precio.compareTo(PRECIO_MAXIMO) > 0) {
+             throw new DatoInvalidoException("El precio debe tener hasta dos decimales y no superar "
+                     + "99.999.999,99 (columna DECIMAL(10,2)).");
+diff --git a/src/main/java/tallernet/modelo/Vehiculo.java b/src/main/java/tallernet/modelo/Vehiculo.java
+index cae7cb4..2013c40 100644
+--- a/src/main/java/tallernet/modelo/Vehiculo.java
++++ b/src/main/java/tallernet/modelo/Vehiculo.java
+@@ -1,5 +1,6 @@
+ package tallernet.modelo;
+ 
++import java.util.Locale;
+ import tallernet.excepciones.DatoInvalidoException;
+ import tallernet.util.Formatos;
+ import java.time.LocalDateTime;
+@@ -44,7 +45,7 @@ public class Vehiculo {
+     /** Obligatorio y con el largo máximo de su columna en la base (DEF-13). */
+     private static String requerido(String valor, String campo, int largoMaximo) throws DatoInvalidoException {
+         if (valor == null || valor.isBlank()) {
+-            throw new DatoInvalidoException(campo + " es obligatorio.");
++            throw new DatoInvalidoException(campo + " es un dato obligatorio."); // DEF-28: concordancia
+         }
+         if (valor.strip().length() > largoMaximo) {
+             throw new DatoInvalidoException(campo + " no puede superar " + largoMaximo + " caracteres.");
+@@ -54,7 +55,7 @@ public class Vehiculo {
+ 
+     /** Quita espacios y guiones y pasa a mayúsculas: "ae-123 bc" se convierte en "AE123BC". */
+     public static String normalizarPatente(String patente) {
+-        return patente == null ? "" : patente.replaceAll("[\\s-]", "").toUpperCase();
++        return patente == null ? "" : patente.replaceAll("[\\s-]", "").toUpperCase(Locale.ROOT);
+     }
+ 
+     public final void setPatente(String patente) throws DatoInvalidoException {
+diff --git a/src/main/java/tallernet/persistencia/ClienteDAO.java b/src/main/java/tallernet/persistencia/ClienteDAO.java
+index 12cb67a..da43260 100644
+--- a/src/main/java/tallernet/persistencia/ClienteDAO.java
++++ b/src/main/java/tallernet/persistencia/ClienteDAO.java
+@@ -34,8 +34,7 @@ public class ClienteDAO extends DaoJdbc implements Dao<Cliente, Integer> {
+             }
+             ps.executeUpdate();
+             try (ResultSet claves = ps.getGeneratedKeys()) {
+-                claves.next();
+-                int id = claves.getInt(1);
++                int id = claveGenerada(claves);
+                 cliente.setId(id);
+                 return id;
+             }
+diff --git a/src/main/java/tallernet/persistencia/DaoJdbc.java b/src/main/java/tallernet/persistencia/DaoJdbc.java
+index b597d93..64bfef9 100644
+--- a/src/main/java/tallernet/persistencia/DaoJdbc.java
++++ b/src/main/java/tallernet/persistencia/DaoJdbc.java
+@@ -59,6 +59,17 @@ abstract class DaoJdbc {
+         return resultado;
+     }
+ 
++    /**
++     * Número generado por un INSERT (DEF-33): si la base no devuelve la clave se informa un
++     * error en lugar de leer una fila inexistente.
++     */
++    protected static int claveGenerada(ResultSet claves) throws SQLException {
++        if (!claves.next()) {
++            throw new SQLException("La base no devolvió el número generado para el registro.");
++        }
++        return claves.getInt(1);
++    }
++
+     /** Plantilla de búsqueda por clave: a lo sumo una fila. */
+     protected <T> Optional<T> consultarUno(String accion, String sql, ParametrosSentencia parametros,
+                                            MapeadorFila<T> mapeador) throws PersistenciaException {
+diff --git a/src/main/java/tallernet/persistencia/ServicioDAO.java b/src/main/java/tallernet/persistencia/ServicioDAO.java
+index f6104ba..2811206 100644
+--- a/src/main/java/tallernet/persistencia/ServicioDAO.java
++++ b/src/main/java/tallernet/persistencia/ServicioDAO.java
+@@ -34,8 +34,7 @@ public class ServicioDAO extends DaoJdbc implements Dao<Servicio, Integer> {
+             }
+             ps.executeUpdate();
+             try (ResultSet claves = ps.getGeneratedKeys()) {
+-                claves.next();
+-                return claves.getInt(1);
++                return claveGenerada(claves);
+             }
+         } catch (SQLException e) {
+             throw TraductorSQLException.traducir("registrar el servicio", e, "Ya existe un servicio con esa descripción.");
+diff --git a/src/main/java/tallernet/persistencia/TurnoDAO.java b/src/main/java/tallernet/persistencia/TurnoDAO.java
+index 200301a..c45717e 100644
+--- a/src/main/java/tallernet/persistencia/TurnoDAO.java
++++ b/src/main/java/tallernet/persistencia/TurnoDAO.java
+@@ -93,8 +93,7 @@ public class TurnoDAO extends DaoJdbc implements TurnoRepositorio {
+                     }
+                     ps.executeUpdate();
+                     try (ResultSet claves = ps.getGeneratedKeys()) {
+-                        claves.next();
+-                        turno.setId(claves.getInt(1));
++                        turno.setId(claveGenerada(claves));
+                     }
+                 }
+                 con.commit();
+diff --git a/src/main/java/tallernet/persistencia/VehiculoDAO.java b/src/main/java/tallernet/persistencia/VehiculoDAO.java
+index 0080108..a9e8e4f 100644
+--- a/src/main/java/tallernet/persistencia/VehiculoDAO.java
++++ b/src/main/java/tallernet/persistencia/VehiculoDAO.java
+@@ -31,8 +31,7 @@ public class VehiculoDAO extends DaoJdbc implements VehiculoRepositorio {
+             ps.setInt(6, vehiculo.getKmAlta());
+             ps.executeUpdate();
+             try (ResultSet claves = ps.getGeneratedKeys()) {
+-                claves.next();
+-                int id = claves.getInt(1);
++                int id = claveGenerada(claves);
+                 vehiculo.setId(id);
+                 return id;
+             }
+diff --git a/src/main/java/tallernet/vista/LectorEntrada.java b/src/main/java/tallernet/vista/LectorEntrada.java
+index d3d2b54..02c4472 100644
+--- a/src/main/java/tallernet/vista/LectorEntrada.java
++++ b/src/main/java/tallernet/vista/LectorEntrada.java
+@@ -1,5 +1,6 @@
+ package tallernet.vista;
+ 
++import java.util.Locale;
+ import java.io.InputStream;
+ import java.io.PrintStream;
+ import java.nio.charset.Charset;
+@@ -63,7 +64,7 @@ public class LectorEntrada {
+     /** Insiste hasta recibir S o N. */
+     public boolean confirmar(String pregunta) {
+         while (true) {
+-            String texto = leerTexto(pregunta + " (S/N): ").toUpperCase();
++            String texto = leerTexto(pregunta + " (S/N): ").toUpperCase(Locale.ROOT);
+             if (texto.equals("S") || texto.equals("N")) {
+                 return texto.equals("S");
+             }
+diff --git a/src/main/java/tallernet/vista/VistaConsola.java b/src/main/java/tallernet/vista/VistaConsola.java
+index 2483dbf..c5a0cca 100644
+--- a/src/main/java/tallernet/vista/VistaConsola.java
++++ b/src/main/java/tallernet/vista/VistaConsola.java
+@@ -1,7 +1,7 @@
+ package tallernet.vista;
+ 
+ import tallernet.archivos.ImportadorClientesCsv;
+-import tallernet.conexion.ConexionBD;
++import tallernet.modelo.InfoConexion;
+ import tallernet.controlador.ArchivoControlador;
+ import tallernet.controlador.CatalogoControlador;
+ import tallernet.controlador.CatalogoControlador.CriterioServicio;
+@@ -24,6 +24,7 @@ import tallernet.excepciones.TurnoSuperpuestoException;
+ import tallernet.modelo.AgendaDiaria;
+ import tallernet.modelo.Cliente;
+ import tallernet.modelo.Empleado;
++import tallernet.modelo.EstadoTurno;
+ import tallernet.modelo.Sede;
+ import tallernet.modelo.Servicio;
+ import tallernet.modelo.Turno;
+@@ -168,21 +169,21 @@ public class VistaConsola {
+             out.println("  0. Volver");
+             opcion = lector.leerEntero("Elija una opción: ");
+             switch (opcion) {
+-                case 1 -> ejecutar(this::nuevoTurno);
+-                case 2 -> ejecutar(this::reprogramarTurno);
+-                case 3 -> ejecutar(this::cancelarTurno);
+-                case 4 -> ejecutar(() -> {
++                case 1 -> ejecutarEscritura("el turno no se registró", this::nuevoTurno);
++                case 2 -> ejecutarEscritura("el turno no se reprogramó", this::reprogramarTurno);
++                case 3 -> ejecutarEscritura("el turno no se canceló", this::cancelarTurno);
++                case 4 -> ejecutarEscritura("la cancelación no se deshizo", () -> {
+                     Turno t = turnos.deshacerUltimaCancelacion();
+                     out.println("  Cancelación revertida: Turno N.° " + t.getId() + " " + t.getEstado());
+                 });
+                 case 5 -> ejecutar(this::agenda);
+                 case 6 -> ejecutar(() -> mostrarTurno(turnos.buscarTurno(lector.leerEntero("Número de turno: "))));
+-                case 7 -> ejecutar(() -> {
++                case 7 -> ejecutarEscritura("la llegada no se registró", () -> {
+                     Turno t = turnos.registrarLlegada(lector.leerEntero("Número de turno: "));
+                     out.println("  Llegada registrada. Turno N.° " + t.getId() + " (" + t.getVehiculo().getPatente()
+                             + ") en la posición " + turnos.verColaRecepcion().size() + " de la cola.");
+                 });
+-                case 8 -> ejecutar(() -> {
++                case 8 -> ejecutarEscritura("no se registró la atención", () -> {
+                     Turno t = turnos.atenderSiguiente();
+                     out.println("  Atendiendo Turno N.° " + t.getId() + " (" + t.getVehiculo().getPatente()
+                             + ", " + t.getServicio().getDescripcion() + ") -> estado " + t.getEstado());
+@@ -211,12 +212,12 @@ public class VistaConsola {
+             out.println("  0. Volver");
+             opcion = lector.leerEntero("Elija una opción: ");
+             switch (opcion) {
+-                case 1 -> ejecutar(this::altaCliente);
+-                case 2 -> ejecutar(this::altaVehiculo);
++                case 1 -> ejecutarEscritura("el cliente no se registró", this::altaCliente);
++                case 2 -> ejecutarEscritura("el vehículo no se registró", this::altaVehiculo);
+                 case 3 -> ejecutar(this::listarClientes);
+                 case 4 -> ejecutar(this::buscarVehiculo);
+                 case 5 -> ejecutar(this::historial);
+-                case 6 -> ejecutar(this::modificarContacto);
++                case 6 -> ejecutarEscritura("los datos de contacto no se modificaron", this::modificarContacto);
+                 case 0 -> { }
+                 default -> out.println("  [!] Opción no válida. Elija un número del menú.");
+             }
+@@ -242,7 +243,7 @@ public class VistaConsola {
+                 case 2 -> ejecutar(() -> listarServicios(CriterioServicio.PRECIO));
+                 case 3 -> ejecutar(() -> listarServicios(CriterioServicio.DURACION));
+                 case 4 -> ejecutar(this::proximosServices);
+-                case 5 -> ejecutar(this::actualizarPrecio);
++                case 5 -> ejecutarEscritura("el precio no se modificó", this::actualizarPrecio);
+                 case 0 -> { }
+                 default -> out.println("  [!] Opción no válida. Elija un número del menú.");
+             }
+@@ -301,9 +302,13 @@ public class VistaConsola {
+      * específico al más general: una superposición (S5) se informa distinto de una regla
+      * violada, y una falla técnica de la base se distingue de ambas.
+      */
+-    private void ejecutar(Accion accion) {
++    private boolean ejecutar(Accion accion) {
++        boolean correcto = false;
+         try {
+             accion.ejecutar();
++            correcto = true;
++        } catch (OperacionRechazada ignored) {
++            // El motivo ya se informó dentro de la operación.
+         } catch (TurnoSuperpuestoException e) {
+             out.println("  [S5] " + e.getMessage());
+         } catch (TurnoInvalidoException | DatoInvalidoException e) {
+@@ -318,6 +323,9 @@ public class VistaConsola {
+             out.println("  [ARCHIVO] " + e.getMessage());
+         } catch (TallerNetException e) {
+             out.println("  [!] " + e.getMessage());
++        } catch (LectorEntrada.EntradaFinalizadaException e) {
++            // DEF-30: el fin de la entrada (Ctrl-D) no es un error interno; cierra la sesión en iniciar().
++            throw e;
+         } catch (RuntimeException e) {
+             // Red de seguridad (DEF-20): un error imprevisto de programación no debe cerrar el menú.
+             out.println("  [ERROR INTERNO] La operación no pudo completarse (" + e.getClass().getSimpleName()
+@@ -329,6 +337,35 @@ public class VistaConsola {
+         if (errorBitacora != null) {
+             out.println("  [AVISO] " + errorBitacora);
+         }
++        return correcto;
++    }
++
++    /**
++     * Operación que modifica datos (DEF-27): si se rechaza, además del motivo se informa en forma
++     * explícita que no se guardó nada, para que el recepcionista no suponga lo contrario.
++     */
++    private void ejecutarEscritura(String queNoOcurrio, Accion accion) {
++        resultadoParcial = null;
++        if (!ejecutar(accion)) {
++            out.println("  Resultado: " + (resultadoParcial != null ? resultadoParcial
++                    : queNoOcurrio + "; no se guardó ningún dato."));
++        }
++        resultadoParcial = null;
++    }
++
++    /**
++     * DEF-34: cuando una operación ya grabó una parte (el cliente nuevo de un alta de vehículo) y
++     * luego falla, el resultado informa lo que sí quedó guardado en lugar de «no se guardó nada».
++     */
++    private String resultadoParcial;
++
++    /** Rechazo informado por la propia operación (por ejemplo, S5): se trata como una falla. */
++    private static final class OperacionRechazada extends TallerNetException {
++        private static final long serialVersionUID = 1L;
++
++        OperacionRechazada() {
++            super("");
++        }
+     }
+ 
+     // ----------------------------------------------------------------- Turnos
+@@ -337,9 +374,12 @@ public class VistaConsola {
+         out.println("Nuevo turno (CU001)");
+         listarSedes();
+         int sedeId = lector.leerEntero("Sede: ");
++        turnos.verificarSede(sedeId);                        // DEF-26: cada dato se valida al ingresarlo
+         String patente = lector.leerTexto("Patente del vehículo: ");
++        out.println("  Vehículo: " + turnos.verificarVehiculo(patente));
+         listarServiciosBreve();
+         int servicioId = lector.leerEntero("Servicio: ");
++        turnos.verificarServicio(servicioId);
+         String fecha = lector.leerTexto("Fecha (dd/mm/aaaa): ");
+         String hora = lector.leerTexto("Hora (HH:mm): ");
+         String obs = lector.leerTexto("Observaciones (opcional): ");
+@@ -352,7 +392,7 @@ public class VistaConsola {
+             Optional<LocalTime> sugerido = turnos.sugerirHorario(sedeId, servicioId, fecha, hora);
+             out.println(sugerido.map(h -> "  Primer horario libre ese día para este servicio: " + h.format(Formatos.HORA))
+                     .orElse("  No quedan horarios libres ese día para este servicio."));
+-            return;
++            throw new OperacionRechazada();
+         }
+         out.println("  Turno N.° " + t.getId() + " CONFIRMADO");
+         mostrarTurno(t);
+@@ -383,6 +423,9 @@ public class VistaConsola {
+ 
+     private void reprogramarTurno() throws TallerNetException {
+         int id = lector.leerEntero("Número de turno a reprogramar: ");
++        Turno actual = turnos.buscarTurno(id);               // DEF-26: el turno se verifica antes de pedir la fecha
++        mostrarTurno(actual);
++        rechazarSiNoConfirmado(actual, "reprogramar");      // DEF-35: también su estado
+         String fecha = lector.leerTexto("Nueva fecha (dd/mm/aaaa): ");
+         String hora = lector.leerTexto("Nueva hora (HH:mm): ");
+         Turno t = turnos.reprogramarTurno(id, fecha, hora);
+@@ -393,6 +436,7 @@ public class VistaConsola {
+         int id = lector.leerEntero("Número de turno a cancelar: ");
+         Turno t = turnos.buscarTurno(id);
+         mostrarTurno(t);
++        rechazarSiNoConfirmado(t, "cancelar");
+         if (lector.confirmar("¿Confirma la cancelación?")) {
+             turnos.cancelarTurno(id);
+             out.println("  Turno N.° " + id + " CANCELADO. La franja " + t.getFranja() + " quedó disponible.");
+@@ -401,6 +445,15 @@ public class VistaConsola {
+         }
+     }
+ 
++    /** DEF-35: un turno cancelado o atendido se rechaza antes de pedir más datos o confirmación. */
++    private void rechazarSiNoConfirmado(Turno t, String accion) throws OperacionRechazada {
++        if (t.getEstado() != EstadoTurno.CONFIRMADO) {
++            out.println("  [?] Solo se pueden " + accion + " turnos confirmados; el turno N.° " + t.getId()
++                    + " está " + t.getEstado() + ".");
++            throw new OperacionRechazada();
++        }
++    }
++
+     private void agenda() throws TallerNetException {
+         listarSedes();
+         int sedeId = lector.leerEntero("Sede: ");
+@@ -448,16 +501,39 @@ public class VistaConsola {
+     // ------------------------------------------------------- Clientes y vehículos
+ 
+     private void altaCliente() throws TallerNetException {
++        registrarClienteNuevo();
++    }
++
++    private Cliente registrarClienteNuevo() throws TallerNetException {
+         String nombre = lector.leerTexto("Nombre: ");
+         String apellido = lector.leerTexto("Apellido: ");
+         String telefono = lector.leerTexto("Teléfono: ");
+         String email = lector.leerTexto("Correo electrónico (opcional): ");
+         Cliente c = clientes.registrarCliente(nombre, apellido, telefono, email);
+         out.println("  Cliente N.° " + c.getId() + " registrado: " + c.getNombreCompleto());
++        return c;
+     }
+ 
++    /**
++     * Alta de vehículo (RF-TN03). DEF-26: el titular se verifica apenas se ingresa su número; si no
++     * existe, se ofrece registrarlo en el mismo flujo, como prevé la precondición de CU001.
++     */
+     private void altaVehiculo() throws TallerNetException {
+-        int clienteId = lector.leerEntero("Número de cliente: ");
++        int numero = lector.leerEntero("Número de cliente: ");
++        Cliente titular;
++        try {
++            titular = clientes.buscarCliente(numero);
++        } catch (EntidadNoEncontradaException e) {
++            out.println("  [?] " + e.getMessage());
++            if (!lector.confirmar("¿Desea registrar el cliente ahora?")) {
++                out.println("  Consulte los clientes con la opción 3 o regístrelo con la opción 1.");
++                throw new OperacionRechazada();
++            }
++            titular = registrarClienteNuevo();
++            resultadoParcial = "el cliente N.° " + titular.getId() + " quedó registrado, pero el vehículo no se registró";
++        }
++        out.println("  Titular: N.° " + titular.getId() + " " + titular.getNombreCompleto());
++        int clienteId = titular.getId();
+         String patente = lector.leerTexto("Patente: ");
+         String marca = lector.leerTexto("Marca: ");
+         String modelo = lector.leerTexto("Modelo: ");
+@@ -551,6 +627,8 @@ public class VistaConsola {
+     private void actualizarPrecio() throws TallerNetException {
+         listarServicios(CriterioServicio.PRECIO);
+         int id = lector.leerEntero("Número de servicio: ");
++        Servicio actual = catalogo.buscarServicio(id);       // DEF-26: se verifica antes de pedir el precio
++        out.println("  Servicio: " + actual.getDescripcion() + " | precio actual " + Formatos.pesos(actual.getPrecioBase()));
+         String precio = lector.leerTexto("Nuevo precio base (por ejemplo 52.000,00): ");
+         Servicio s = catalogo.actualizarPrecio(id, precio);
+         out.println("  Precio actualizado: " + s.getDescripcion() + " -> " + Formatos.pesos(s.getPrecioBase()));
+@@ -584,7 +662,7 @@ public class VistaConsola {
+     }
+ 
+     private void probarConexion() throws TallerNetException {
+-        ConexionBD.InfoConexion info = sistema.probarConexion();
++        InfoConexion info = sistema.probarConexion();
+         out.println("  Conexión correcta con el servidor central.");
+         out.println("  Servidor:  " + info.servidor());
+         out.println("  Usuario:   " + info.usuario());

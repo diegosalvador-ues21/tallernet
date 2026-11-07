@@ -1,0 +1,14 @@
+digraph G {
+  graph [fontname="Carlito", fontsize=11, rankdir=BT, nodesep=0.35, ranksep=0.55, bgcolor="white", pad=0.2];
+  node [shape=plaintext, fontname="Carlito", fontsize=10, fontcolor="#212121"];
+  edge [fontname="Carlito", fontsize=9, color="#616161", fontcolor="#616161"];
+  node [shape=box, style="rounded,filled", fillcolor="white", color="#9e9e9e", fontsize=10];
+  Ex [label="java.lang.Exception", fillcolor="#eeeeee"];
+  T [label="TallerNetException\n(verificada)", fillcolor="#e0f2f1"];
+  TI [label="TurnoInvalidoException"]; TS [label="TurnoSuperpuestoException\n(flujo S5)"];
+  DI [label="DatoInvalidoException"]; RD [label="RegistroDuplicadoException\n(MySQL 1062) · AP4", fillcolor="#fff8e1"];
+  EN [label="EntidadNoEncontradaException\n(MySQL 1452)"];
+  P [label="PersistenciaException\n(envuelve SQLException)"]; C [label="ConexionException\n(SQLState 08, error 1045) · AP4", fillcolor="#fff8e1"];
+  A [label="ArchivoException\n(IOException) · AP4", fillcolor="#fff8e1"];
+  T -> Ex [arrowhead=empty]; TI -> T [arrowhead=empty]; TS -> TI [arrowhead=empty]; DI -> T [arrowhead=empty]; RD -> DI [arrowhead=empty]; EN -> T [arrowhead=empty]; P -> T [arrowhead=empty]; C -> P [arrowhead=empty]; A -> T [arrowhead=empty];
+}

@@ -1,0 +1,99 @@
+╷
+├─ JUnit Platform Suite ✔
+├─ JUnit Jupiter ✔
+│  ├─ Modelo de dominio ✔
+│  │  ├─ Encapsulamiento: el kilometraje fuera de rango se rechaza (CPS05-E7) ✔
+│  │  ├─ Encapsulamiento: los textos respetan el largo de su columna en la base ✔
+│  │  ├─ Encapsulamiento: la patente se normaliza y se valida ✔
+│  │  ├─ Polimorfismo: cada servicio calcula su próximo service a su manera ✔
+│  │  ├─ Herencia: Cliente y Empleado son Persona y describen su rol distinto ✔
+│  │  └─ Un mecánico no puede registrar turnos ✔
+│  ├─ CPC07 - AgendaDiaria (arreglo de franjas) ✔
+│  │  ├─ un turno en la última franja (19:30) ocupa la posición 23 sin salirse del arregl... ✔
+│  │  ├─ turnos que empiezan antes de la apertura o terminan después del cierre no salen ... ✔
+│  │  ├─ primer hueco libre: después del turno N.° 2 (10:00-13:00) el siguiente es a las ... ✔
+│  │  ├─ sin espacio suficiente antes del cierre no se sugiere horario ✔
+│  │  ├─ un service de 180 min a las 10:00 ocupa las franjas 4 a 9 ✔
+│  │  ├─ los turnos cancelados y los de otro día no ocupan la grilla ✔
+│  │  ├─ horarios disponibles en una lista y copia defensiva del arreglo ✔
+│  │  └─ 08:00 a 20:00 en franjas de 30 minutos son 24 posiciones ✔
+│  ├─ CPI04 - Actualización y excepciones de MySQL (TP4) ✔
+│  │  ├─ CPI04-9 UPDATE sobre un registro inexistente: cero filas -> EntidadNoEncontradaE... ✔
+│  │  ├─ CPI04-11 UPDATE del precio de un servicio ✔
+│  │  ├─ CPI04-10 error 1062 en INSERT y en UPDATE -> RegistroDuplicadoException ✔
+│  │  ├─ CPI04-8 UPDATE de teléfono y correo: el cambio queda persistido ✔
+│  │  ├─ CPI04-13 servidor inaccesible -> ConexionException con indicación para la sede ✔
+│  │  └─ CPI04-12 consulta por rango: la semana del 05/10/2026 tiene 4 turnos no cancelad... ✔
+│  ├─ CPC10 - TraductorSQLException ✔
+│  │  ├─ 1452 y 1451 integridad referencial; 3819 CHECK violado ✔
+│  │  ├─ 1213 interbloqueo es reintentable; la causa original se conserva ✔
+│  │  ├─ SQLState 08xxx y error 1045 -> ConexionException; nunca se muestra el texto del ... ✔
+│  │  └─ 1062 clave duplicada -> RegistroDuplicadoException con el mensaje de negocio ✔
+│  ├─ ValidadorTurnoTest ✔
+│  │  ├─ CPF02 - Hora de inicio contra la franja de la sede ✔
+│  │  │  ├─ CPF02-01: h = -1:00 (CEI1) -> Formato de hora no válido (use HH:mm, entre 00:00 ... ✔
+│  │  │  ├─ CPF02-02: h = 00:00 (CEV1) -> Horario fuera de la franja de atención de la sede ... ✔
+│  │  │  ├─ CPF02-03: h = 01:00 (CEV1) -> Horario fuera de la franja de atención de la sede ... ✔
+│  │  │  ├─ CPF02-04: h = 07:00 (CEV1) -> Horario fuera de la franja de atención de la sede ... ✔
+│  │  │  ├─ CPF02-05: h = 08:00 (CEV2) -> REGISTRA 08:00-09:00 ✔
+│  │  │  ├─ CPF02-06: h = 09:00 (CEV2) -> REGISTRA 09:00-10:00 ✔
+│  │  │  ├─ CPF02-07: h = 18:00 (CEV2) -> REGISTRA 18:00-19:00 ✔
+│  │  │  ├─ CPF02-08: h = 19:00 (CEV2) -> REGISTRA 19:00-20:00 ✔
+│  │  │  ├─ CPF02-09: h = 20:00 (CEV3) -> Horario fuera de la franja de atención de la sede ... ✔
+│  │  │  ├─ CPF02-10: h = 22:00 (CEV3) -> Horario fuera de la franja de atención de la sede ... ✔
+│  │  │  ├─ CPF02-11: h = 23:00 (CEV3) -> Horario fuera de la franja de atención de la sede ... ✔
+│  │  │  └─ CPF02-12: h = 24:00 (CEI2) -> Formato de hora no válido (use HH:mm, entre 00:00 ... ✔
+│  │  └─ CPC03 - Reglas de negocio puntuales ✔
+│  │     ├─ CPC03-1 servicio de 180 min a las 18:00 termina después del cierre ✔
+│  │     ├─ CPC03-3 fecha pasada respecto del reloj del sistema ✔
+│  │     └─ CPC03-2 domingo 04/10/2026 ✔
+│  ├─ Algoritmos de ordenamiento y búsqueda ✔
+│  │  ├─ Inserción sobre una lista ya ordenada hace n-1 comparaciones ✔
+│  │  ├─ Búsqueda lineal recorre toda la lista cuando la clave no existe ✔
+│  │  ├─ Búsqueda binaria: encuentra con a lo sumo log2(n)+1 comparaciones ✔
+│  │  └─ Inserción y quicksort producen el mismo orden que List.sort ✔
+│  ├─ CPC01 - Regla de superposición de la clase Turno ✔
+│  │  ├─ CPC01-2 turnos contiguos: 13:00-14:00 no choca con 10:00-13:00 ✔
+│  │  ├─ CPC01-4 turno cancelado: libera la franja ✔
+│  │  ├─ CPC01-1 choque parcial: 10:30-11:30 contra 10:00-13:00 ✔
+│  │  ├─ CPC01-3 otra sede: mismo horario en Flores no choca ✔
+│  │  └─ CPC01-5 turno inexistente (null): no hay superposición ✔
+│  ├─ CPC08 - ReporteSemanal (arreglos y matriz) ✔
+│  │  ├─ acumula por día y por sede; ignora cancelados, domingos y otras semanas ✔
+│  │  └─ los getters devuelven copias: el reporte no se altera desde afuera ✔
+│  ├─ CPI04 - Transacción de alta de turnos contra MySQL ✔
+│  │  ├─ CPI04-1 alta en horario ocupado: se revierte sin insertar filas ✔
+│  │  ├─ CPI04-3 concurrencia: dos sedes piden la misma franja de Flores y solo una la ob... ✔
+│  │  ├─ CPI04-4 concurrencia: la misma franja en sedes distintas no se bloquea ✔
+│  │  ├─ CPI04-5 reprogramar sobre una franja ocupada: la fecha original se conserva ✔
+│  │  ├─ CPI04-6 cambio de estado condicionado: no se cancela un turno ya atendido ✔
+│  │  ├─ CPI04-7 reporte por sede: una sede sin turnos confirmados aparece con ceros ✔
+│  │  └─ CPI04-2 alta en horario libre: se confirma con número correlativo 7 ✔
+│  └─ CPC09 - Exportación, importación y bitácora ✔
+│     ├─ un campo con punto y coma o comillas se escapa entre comillas ✔
+│     ├─ importación: registra las líneas válidas e informa cada rechazo con su número de... ✔
+│     ├─ si la bitácora no puede escribirse, la operación sigue y queda un aviso ✔
+│     ├─ el reporte semanal se exporta con nombre por semana ISO ✔
+│     ├─ importar un archivo inexistente lanza ArchivoException con un mensaje claro ✔
+│     ├─ la agenda se exporta en UTF-8 con BOM, encabezado y una fila por franja ✔
+│     └─ bitácora: agrega líneas y devuelve las últimas con un búfer circular ✔
+└─ JUnit Vintage ✔
+
+Test run finished after 4091 ms
+[        15 containers found      ]
+[         0 containers skipped    ]
+[        15 containers started    ]
+[         0 containers aborted    ]
+[        15 containers successful ]
+[         0 containers failed     ]
+[        64 tests found           ]
+[         0 tests skipped         ]
+[        64 tests started         ]
+[         0 tests aborted         ]
+[        64 tests successful      ]
+[         0 tests failed          ]
+
+
+WARNING: Delegated to the 'execute' command.
+         This behaviour has been deprecated and will be removed in a future release.
+         Please use the 'execute' command directly.

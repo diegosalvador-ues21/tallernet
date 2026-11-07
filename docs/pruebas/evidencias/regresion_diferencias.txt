@@ -1,0 +1,83 @@
+Regresión s01-s14 (jar final) contra la referencia del AP4 (s01-s13) y la corrida Mac previa (s14).
+Normalizado: dirección del servidor (3306->3307), versión del motor, rutas, marcas de hora de la bitácora y ms.
+
+### s01_cps05_E1_E4.log: 7 líneas distintas (0 quitadas)
+    +  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+    +  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+    +  Vehículo: AC456DE - Toyota Etios 2019 (61.200 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+    +  Vehículo: AC456DE - Toyota Etios 2019 (61.200 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+### s02_cps05_E5.log: 2 líneas distintas (0 quitadas)
+    +  Titular: N.° 5 Herrera, Paula
+    +  Vehículo: AG555PH - Fiat Argo 2023 (18.500 km al alta)
+### s03_cps05_E6_E7.log: 2 líneas distintas (0 quitadas)
+    +  Titular: N.° 4 Fernández, Ricardo
+    +  Resultado: el vehículo no se registró; no se guardó ningún dato.
+### s04_robustez.log: 3 líneas distintas (0 quitadas)
+    +  Resultado: el cliente no se registró; no se guardó ningún dato.
+    +  Titular: N.° 1 Gómez, Laura
+    +  Resultado: el vehículo no se registró; no se guardó ningún dato.
+### s05_ordenamiento_busqueda.log: 0 líneas distintas (0 quitadas)
+### s06_cola_pila_reprogramacion.log: 18 líneas distintas (0 quitadas)
+    +  Resultado: la llegada no se registró; no se guardó ningún dato.
+    +  --------------------------------------------------
+    +  Turno N.° 3 - CONFIRMADO
+    +  Sede:      Sede Flores
+    +  Franja:    05/10/2026 09:00 a 10:30
+    +  Vehículo:  OKL482 - Ford Ranger 2014 (198.750 km al alta)
+    +  Servicio:  Diagnóstico de frenos (90 min)
+    +  Obs.:      Pedal de freno esponjoso
+    +  --------------------------------------------------
+    +  Resultado: el turno no se reprogramó; no se guardó ningún dato.
+    +  --------------------------------------------------
+    +  Turno N.° 3 - CONFIRMADO
+    +  Sede:      Sede Flores
+    +  Franja:    05/10/2026 09:00 a 10:30
+    +  Vehículo:  OKL482 - Ford Ranger 2014 (198.750 km al alta)
+    +  Servicio:  Diagnóstico de frenos (90 min)
+    +  Obs.:      Pedal de freno esponjoso
+    +  --------------------------------------------------
+### s07_catalogo_reportes.log: 0 líneas distintas (0 quitadas)
+### s08_volumen.log: 0 líneas distintas (0 quitadas)
+### s09_actualizacion_excepciones.log: 7 líneas distintas (0 quitadas)
+    +  Resultado: los datos de contacto no se modificaron; no se guardó ningún dato.
+    +  Resultado: los datos de contacto no se modificaron; no se guardó ningún dato.
+    +  Titular: N.° 1 Gómez, Laura
+    +  Resultado: el vehículo no se registró; no se guardó ningún dato.
+    +  Servicio: Cambio de aceite y filtros | precio actual $ 45.000,00
+    +  Servicio: Diagnóstico de frenos | precio actual $ 25.000,00
+    +  Resultado: el precio no se modificó; no se guardó ningún dato.
+### s10_arreglos_archivos.log: 2 líneas distintas (0 quitadas)
+    +  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+### s11_volumen_arreglos.log: 0 líneas distintas (0 quitadas)
+### s12_servidor_detenido.log: 0 líneas distintas (0 quitadas)
+### s13_credenciales_invalidas.log: 0 líneas distintas (0 quitadas)
+### s14_fechas_reales.log: 25 líneas distintas (0 quitadas)
+    +  Titular: N.° 5 Fernández Ríos, Lucía
+    +  Titular: N.° 5 Fernández Ríos, Lucía
+    +  Resultado: el vehículo no se registró; no se guardó ningún dato.
+    +  Titular: N.° 5 Fernández Ríos, Lucía
+    +  Resultado: el vehículo no se registró; no se guardó ningún dato.
+    +  Resultado: los datos de contacto no se modificaron; no se guardó ningún dato.
+    +  Vehículo: AH123XY - Peugeot 208 2023 (15.300 km al alta)
+    +  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+    +  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+    +  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+    +  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+    +  Resultado: el turno no se registró; no se guardó ningún dato.
+    +  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+    +  --------------------------------------------------
+    +  Turno N.° 9 - CONFIRMADO
+    +  Sede:      Sede Echeandía
+    +  Franja:    09/11/2026 11:00 a 11:30
+    +  Vehículo:  AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+    +  Servicio:  Diagnóstico por escáner (OBD-II) (30 min)
+    +  --------------------------------------------------
+    +  Servicio: Alineación y balanceo | precio actual $ 38.000,00
+    +  Servicio: Alineación y balanceo | precio actual $ 40.500,00
+    +  Resultado: el precio no se modificó; no se guardó ningún dato.

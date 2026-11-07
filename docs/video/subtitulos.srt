@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:01,582
+Hola, soy Diego Salvador.
+
+2
+00:00:01,582 --> 00:00:09,683
+TALLERNET es mi proyecto integrador para Talleres Ruiz Díaz, que tiene dos sedes en Buenos Aires con agendas de papel separadas.
+
+3
+00:00:09,683 --> 00:00:13,924
+Eso genera turnos superpuestos y un titular sin visión de conjunto.
+
+4
+00:00:13,924 --> 00:00:20,000
+TALLERNET centraliza turnos, clientes y vehículos en una base MySQL que comparten las dos sedes.
+
+5
+00:00:20,000 --> 00:00:26,395
+Elegí el patrón DAO porque la arquitectura del AP2 ya lo definía y porque el AP4 se centra en la persistencia:
+
+6
+00:00:26,395 --> 00:00:30,232
+los controladores trabajan contra la interfaz Dao y nunca ven SQL.
+
+7
+00:00:30,232 --> 00:00:39,534
+Lo refuerzo con un método plantilla en la clase abstracta DaoJdbc, que concentra el código JDBC y la traducción de errores, y con un Singleton para la conexión.
+
+8
+00:00:39,534 --> 00:00:45,000
+Descarté Active Record y un ORM porque mezclan el negocio con la base u ocultan las consultas.
+
+9
+00:00:45,000 --> 00:00:51,581
+Inicio sesión como Carla, recepcionista de Echeandía.
+
+10
+00:00:51,581 --> 00:00:56,796
+Doy de alta un vehículo para el cliente 7:
+
+11
+00:00:56,796 --> 00:01:05,985
+no existe, y el sistema lo dice en el acto y aclara que no se guardó nada.
+
+12
+00:01:05,985 --> 00:01:08,841
+Ahora con la clienta 1:
+
+13
+00:01:08,841 --> 00:01:21,382
+escribo la patente en minúsculas y el sistema la normaliza a LBS854 y valida el año y el kilometraje.
+
+14
+00:01:21,382 --> 00:01:29,081
+Le pido un cambio de aceite el lunes 5 de octubre a las 10:30.
+
+15
+00:01:29,081 --> 00:01:34,420
+Ese horario lo ocupa un service de 10 a 13:
+
+16
+00:01:34,420 --> 00:01:39,263
+es el flujo S5 del caso de uso crítico.
+
+17
+00:01:39,263 --> 00:01:47,955
+El sistema rechaza el turno y sugiere el primer horario libre, las 13.
+
+18
+00:01:47,955 --> 00:01:48,824
+Acepto:
+
+19
+00:01:48,824 --> 00:01:51,183
+turno 7 confirmado.
+
+20
+00:01:51,183 --> 00:01:54,784
+La grilla del día lo muestra:
+
+21
+00:01:54,784 --> 00:01:59,999
+es un arreglo de 24 franjas de media hora.
+
+22
+00:02:00,000 --> 00:02:04,180
+Y la prueba de que quedó guardado:
+
+23
+00:02:04,180 --> 00:02:10,942
+consulto MySQL directamente, sin pasar por el programa.
+
+24
+00:02:10,942 --> 00:02:15,000
+Ahí están el vehículo y el turno.
+
+25
+00:02:15,000 --> 00:02:17,478
+¿Qué pasa si se corta la conexión?
+
+26
+00:02:17,478 --> 00:02:24,693
+Las excepciones de MySQL se traducen a mensajes que dicen qué revisar, y el menú sigue funcionando.
+
+27
+00:02:24,693 --> 00:02:27,827
+Para los arreglos apliqué una regla simple:
+
+28
+00:02:27,827 --> 00:02:40,000
+arreglo cuando la cantidad la fija el negocio, como las 24 franjas o los seis días hábiles; ArrayList cuando la fijan los datos, como los turnos que vienen de la base.
+
+29
+00:02:40,000 --> 00:02:46,090
+Detrás hay 193 pruebas automáticas con el 90 % del código cubierto.
+
+30
+00:02:46,090 --> 00:02:53,909
+Lo próximo son presupuestos y órdenes de trabajo, repuestos y asistencia del personal.
+
+31
+00:02:53,909 --> 00:02:59,272
+El código está en GitHub, en diegosalvador-ues21/tallernet.
+
+32
+00:02:59,272 --> 00:03:00,000
+Gracias.

@@ -1,0 +1,15 @@
+CPI04-3 (concurrencia en la misma sede) con SELECT ... FOR UPDATE: 13 ejecuciones consecutivas
+Fecha: 2026-10-18 17:49  MySQL 8.0.46-0ubuntu0.24.04.4
+Ejecución 1: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.862 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 2: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.059 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 3: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.899 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 4: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.823 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 5: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.788 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 6: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.919 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 7: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.894 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 8: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.928 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 9: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.907 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 10: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.789 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 11: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.966 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 12: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.982 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+Ejecución 13: exit=0  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.018 s - in tallernet.persistencia.TurnoDAOIntegracionTest

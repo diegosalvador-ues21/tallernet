@@ -1,0 +1,2 @@
+Resultado de CPI04-3 con el SELECT ... FOR UPDATE eliminado (3 ejecuciones, 3 fallas):
+org.opentest4j.AssertionFailedError: exactamente una reserva confirmada ==> expected: <1> but was: <2>

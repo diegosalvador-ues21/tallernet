@@ -1,0 +1,168 @@
+(Fecha de referencia fijada para pruebas: 2026-10-01T08:00)
+================================================================
+  TALLERNET - Talleres Ruiz Díaz | Gestión de turnos multi-sede
+================================================================
+Personal habilitado para registrar turnos:
+  1. Ruiz Díaz, Mario - Administrador (sede 1)
+  2. Medina, Carla - Recepcionista (sede 1)
+  3. Acosta, Julián - Recepcionista (sede 2)
+Ingrese su número de empleado: 2
+Sesión iniciada: Carla Medina (Recepcionista).
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 3
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 1
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 3
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 1
+  [SIN CONEXIÓN] No se pudo conectar con el servidor central de TALLERNET (localhost:3306/tallernet). Verifique Internet, la VPN de la sede y el archivo db.properties.
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 6
+
+----------------------------------------------------------------
+  SISTEMA
+----------------------------------------------------------------
+  1. Probar conexión con el servidor central
+  2. Ver las últimas operaciones (bitácora)
+  0. Volver
+Elija una opción: 1
+  [SIN CONEXIÓN] No se pudo conectar con el servidor central de TALLERNET (localhost:3306/tallernet). Verifique Internet, la VPN de la sede y el archivo db.properties.
+
+----------------------------------------------------------------
+  SISTEMA
+----------------------------------------------------------------
+  1. Probar conexión con el servidor central
+  2. Ver las últimas operaciones (bitácora)
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 1
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 5
+  [SIN CONEXIÓN] No se pudo conectar con el servidor central de TALLERNET (localhost:3306/tallernet). Verifique Internet, la VPN de la sede y el archivo db.properties.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 0
+Sesión finalizada. ¡Hasta luego!

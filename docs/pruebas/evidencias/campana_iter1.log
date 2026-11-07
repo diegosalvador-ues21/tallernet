@@ -1,0 +1,224 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< tallernet:tallernet >-------------------------
+[INFO] Building TALLERNET - Proyecto integrador AP4 0.4.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24399 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tallernet ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ tallernet ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 58 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tallernet ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ tallernet ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 18 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ tallernet ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running tallernet.controlador.ClienteControladorTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.713 s -- in tallernet.controlador.ClienteControladorTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s -- in tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.util.AlgoritmosTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in tallernet.util.AlgoritmosTest
+[INFO] Running tallernet.modelo.AgendaDiariaTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in tallernet.modelo.AgendaDiariaTest
+[INFO] Running tallernet.modelo.LimitesTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in tallernet.modelo.LimitesTest
+[INFO] Running tallernet.modelo.TurnoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.modelo.TurnoTest
+[INFO] Running tallernet.modelo.ModeloTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in tallernet.modelo.ModeloTest
+[INFO] Running tallernet.modelo.ReporteSemanalTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in tallernet.modelo.ReporteSemanalTest
+[INFO] Running tallernet.archivos.ArchivosTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in tallernet.archivos.ArchivosTest
+[main] INFO org.testcontainers.DockerClientFactory - Testcontainers version: 1.21.3
+[main] INFO org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([/opt/homebrew/opt/openjdk@17/bin, /opt/homebrew/bin, /opt/homebrew/sbin, /usr/local/bin, /System/Cryptexes/App/usr/bin, /usr/bin, /bin, /usr/sbin, /sbin, /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin, /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin, /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin, /pkg/env/global/bin, /opt/homebrew/bin, <home>/.antigravity-ide/antigravity-ide/bin, <home>/.local/bin, /opt/homebrew/opt/node@22/bin, /opt/homebrew/sbin, <home>/.lmstudio/bin])
+[main] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+	UnixSocketClientProviderStrategy: failed with exception BadRequestException (Status 400: {"ID":"","Containers":0,"ContainersRunning":0,"ContainersPaused":0,"ContainersStopped":0,"Images":0,"Driver":"","DriverStatus":null,"Plugins":{"Volume":null,"Network":null,"Authorization":null,"Log":null},"MemoryLimit":false,"SwapLimit":false,"CpuCfsPeriod":false,"CpuCfsQuota":false,"CPUShares":false,"CPUSet":false,"PidsLimit":false,"IPv4Forwarding":false,"Debug":false,"NFd":0,"OomKillDisable":false,"NGoroutines":0,"SystemTime":"","LoggingDriver":"","CgroupDriver":"","NEventsListener":0,"KernelVersion":"","OperatingSystem":"","OSVersion":"","OSType":"","Architecture":"","IndexServerAddress":"","RegistryConfig":null,"NCPU":0,"MemTotal":0,"GenericResources":null,"DockerRootDir":"","HttpProxy":"","HttpsProxy":"","NoProxy":"","Name":"","Labels":["com.docker.desktop.address=unix://<home>/Library/Containers/com.docker.docker/Data/docker-cli.sock"],"ExperimentalBuild":false,"ServerVersion":"","Runtimes":null,"DefaultRuntime":"","Swarm":{"NodeID":"","NodeAddr":"","LocalNodeState":"","ControlAvailable":false,"Error":"","RemoteManagers":null},"LiveRestoreEnabled":false,"Isolation":"","InitBinary":"","ContainerdCommit":{"ID":""},"RuncCommit":{"ID":""},"InitCommit":{"ID":""},"SecurityOptions":null,"CDISpecDirs":null,"Warnings":null})
+	DockerDesktopClientProviderStrategy: failed with exception BadRequestException (Status 400: {"ID":"","Containers":0,"ContainersRunning":0,"ContainersPaused":0,"ContainersStopped":0,"Images":0,"Driver":"","DriverStatus":null,"Plugins":{"Volume":null,"Network":null,"Authorization":null,"Log":null},"MemoryLimit":false,"SwapLimit":false,"CpuCfsPeriod":false,"CpuCfsQuota":false,"CPUShares":false,"CPUSet":false,"PidsLimit":false,"IPv4Forwarding":false,"Debug":false,"NFd":0,"OomKillDisable":false,"NGoroutines":0,"SystemTime":"","LoggingDriver":"","CgroupDriver":"","NEventsListener":0,"KernelVersion":"","OperatingSystem":"","OSVersion":"","OSType":"","Architecture":"","IndexServerAddress":"","RegistryConfig":null,"NCPU":0,"MemTotal":0,"GenericResources":null,"DockerRootDir":"","HttpProxy":"","HttpsProxy":"","NoProxy":"","Name":"","Labels":["com.docker.desktop.address=unix://<home>/Library/Containers/com.docker.docker/Data/docker-cli.sock"],"ExperimentalBuild":false,"ServerVersion":"","Runtimes":null,"DefaultRuntime":"","Swarm":{"NodeID":"","NodeAddr":"","LocalNodeState":"","ControlAvailable":false,"Error":"","RemoteManagers":null},"LiveRestoreEnabled":false,"Isolation":"","InitBinary":"","ContainerdCommit":{"ID":""},"RuncCommit":{"ID":""},"InitCommit":{"ID":""},"SecurityOptions":null,"CDISpecDirs":null,"Warnings":null})As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+[INFO] Running tallernet.persistencia.AltasContenedorTest
+[WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0 s -- in tallernet.persistencia.AltasContenedorTest
+[INFO] Running tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Running tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.686 s -- in tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Running tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.536 s -- in tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Running tallernet.vista.VistaAltasTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s -- in tallernet.vista.VistaAltasTest
+[INFO] Running tallernet.arquitectura.ArquitecturaTest
+[main] INFO com.tngtech.archunit.core.PluginLoader - Detected Java version 17.0.21.0.3
+[ERROR] Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.912 s <<< FAILURE! -- in tallernet.arquitectura.ArquitecturaTest
+[ERROR] ArquitecturaTest.capas -- Time elapsed: 0.860 s <<< FAILURE!
+java.lang.AssertionError: 
+Architecture Violation [Priority: MEDIUM] - Rule 'Layered architecture considering only dependencies in layers, consisting of
+layer 'Vista' ('tallernet.vista..')
+layer 'Controlador' ('tallernet.controlador..')
+layer 'Archivos' ('tallernet.archivos..')
+layer 'Persistencia' ('tallernet.persistencia..')
+layer 'Conexion' ('tallernet.conexion..')
+layer 'Modelo' ('tallernet.modelo..')
+where layer 'Vista' may not be accessed by any layer
+where layer 'Controlador' may only be accessed by layers ['Vista']
+where layer 'Persistencia' may only be accessed by layers ['Controlador']
+where layer 'Conexion' may only be accessed by layers ['Persistencia', 'Controlador']' was violated (6 times):
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.cifrado()> in (VistaConsola.java:648)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.driver()> in (VistaConsola.java:647)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.milisegundos()> in (VistaConsola.java:649)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.motor()> in (VistaConsola.java:646)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.servidor()> in (VistaConsola.java:644)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.usuario()> in (VistaConsola.java:645)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:86)
+	at com.tngtech.archunit.library.Architectures$LayeredArchitecture.check(Architectures.java:347)
+	at com.tngtech.archunit.junit.internal.ArchUnitTestDescriptor$ArchUnitRuleDescriptor.execute(ArchUnitTestDescriptor.java:167)
+	at com.tngtech.archunit.junit.internal.ArchUnitTestDescriptor$ArchUnitRuleDescriptor.execute(ArchUnitTestDescriptor.java:150)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[ERROR] ArquitecturaTest.sqlSoloEnPersistencia -- Time elapsed: 0.003 s <<< FAILURE!
+java.lang.AssertionError: 
+Architecture Violation [Priority: MEDIUM] - Rule 'no classes that reside outside of packages ['tallernet.persistencia..', 'tallernet.conexion..'] should depend on classes that reside in a package 'java.sql..', because el acceso a MySQL está encapsulado en los DAO (patrón DAO, AP2 2.1)' was violated (4 times):
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.Connection.close()> in (Main.java:90)
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.Connection.close()> in (Main.java:94)
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.Connection.isValid(int)> in (Main.java:91)
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.SQLException.getMessage()> in (Main.java:95)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:86)
+	at com.tngtech.archunit.lang.ArchRule$Factory$SimpleArchRule.check(ArchRule.java:165)
+	at com.tngtech.archunit.junit.internal.ArchUnitTestDescriptor$ArchUnitRuleDescriptor.execute(ArchUnitTestDescriptor.java:167)
+	at com.tngtech.archunit.junit.internal.ArchUnitTestDescriptor$ArchUnitRuleDescriptor.execute(ArchUnitTestDescriptor.java:150)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[INFO] Running tallernet.propiedades.PropiedadesTest
+timestamp = 2026-11-07T09:10:46.120804, PropiedadesTest:laBusquedaBinariaCoincideConLaLineal = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 30         | # of all combined edge cases
+edge-cases#tried = 29         | # of edge cases tried in current run
+seed = -4898867621129543117   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:10:46.164121, PropiedadesTest:turnosDeDistintaSedeNuncaSeSuperponen = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 400        | # of all combined edge cases
+edge-cases#tried = 179        | # of edge cases tried in current run
+seed = -8111379788753563733   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:10:46.182135, PropiedadesTest:losOrdenamientosProducenUnaPermutacionOrdenada = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 10         | # of all combined edge cases
+edge-cases#tried = 10         | # of edge cases tried in current run
+seed = 6411215807579739635    | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:10:46.208809, PropiedadesTest:laGrillaNuncaSaleDeRangoYCuentaBien = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 6          | # of all combined edge cases
+edge-cases#tried = 6          | # of edge cases tried in current run
+seed = -8030142521329567942   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:10:46.230016, PropiedadesTest:laSuperposicionEsSimetrica = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 400        | # of all combined edge cases
+edge-cases#tried = 185        | # of edge cases tried in current run
+seed = 2380957134896456316    | random seed to reproduce generated values
+
+
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.200 s -- in tallernet.propiedades.PropiedadesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   Architecture Violation [Priority: MEDIUM] - Rule 'Layered architecture considering only dependencies in layers, consisting of
+layer 'Vista' ('tallernet.vista..')
+layer 'Controlador' ('tallernet.controlador..')
+layer 'Archivos' ('tallernet.archivos..')
+layer 'Persistencia' ('tallernet.persistencia..')
+layer 'Conexion' ('tallernet.conexion..')
+layer 'Modelo' ('tallernet.modelo..')
+where layer 'Vista' may not be accessed by any layer
+where layer 'Controlador' may only be accessed by layers ['Vista']
+where layer 'Persistencia' may only be accessed by layers ['Controlador']
+where layer 'Conexion' may only be accessed by layers ['Persistencia', 'Controlador']' was violated (6 times):
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.cifrado()> in (VistaConsola.java:648)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.driver()> in (VistaConsola.java:647)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.milisegundos()> in (VistaConsola.java:649)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.motor()> in (VistaConsola.java:646)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.servidor()> in (VistaConsola.java:644)
+Method <tallernet.vista.VistaConsola.probarConexion()> calls method <tallernet.conexion.ConexionBD$InfoConexion.usuario()> in (VistaConsola.java:645)
+[ERROR]   Architecture Violation [Priority: MEDIUM] - Rule 'no classes that reside outside of packages ['tallernet.persistencia..', 'tallernet.conexion..'] should depend on classes that reside in a package 'java.sql..', because el acceso a MySQL está encapsulado en los DAO (patrón DAO, AP2 2.1)' was violated (4 times):
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.Connection.close()> in (Main.java:90)
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.Connection.close()> in (Main.java:94)
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.Connection.isValid(int)> in (Main.java:91)
+Method <tallernet.Main.verificarConexion()> calls method <java.sql.SQLException.getMessage()> in (Main.java:95)
+[INFO] 
+[ERROR] Tests run: 120, Failures: 2, Errors: 0, Skipped: 4
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.441 s
+[INFO] Finished at: 2026-11-07T09:10:46-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project tallernet: There are test failures.
+[ERROR] 
+[ERROR] Please refer to <proyecto>/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

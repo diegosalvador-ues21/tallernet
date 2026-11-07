@@ -1,0 +1,65 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< tallernet:tallernet >-------------------------
+[INFO] Building TALLERNET - Proyecto integrador AP4 0.4.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24399 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tallernet ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ tallernet ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 58 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tallernet ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ tallernet ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 13 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ tallernet ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.073 s -- in tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.util.AlgoritmosTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in tallernet.util.AlgoritmosTest
+[INFO] Running tallernet.modelo.AgendaDiariaTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in tallernet.modelo.AgendaDiariaTest
+[INFO] Running tallernet.modelo.TurnoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.modelo.TurnoTest
+[INFO] Running tallernet.modelo.ModeloTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in tallernet.modelo.ModeloTest
+[INFO] Running tallernet.modelo.ReporteSemanalTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.modelo.ReporteSemanalTest
+[INFO] Running tallernet.archivos.ArchivosTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s -- in tallernet.archivos.ArchivosTest
+[INFO] Running tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Running tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.641 s -- in tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Running tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.560 s -- in tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Running tallernet.vista.VistaAltasTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.697 s -- in tallernet.vista.VistaAltasTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 68, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.274 s
+[INFO] Finished at: 2026-11-07T09:06:30-03:00
+[INFO] ------------------------------------------------------------------------

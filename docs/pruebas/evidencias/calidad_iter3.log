@@ -1,0 +1,514 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< tallernet:tallernet >-------------------------
+[INFO] Building TALLERNET - Proyecto integrador AP4 0.4.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24399 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar) @ tallernet ---
+[INFO] argLine set to "-javaagent:<home>/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=<proyecto>/target/jacoco.exec"
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tallernet ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ tallernet ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tallernet ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ tallernet ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ tallernet ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running tallernet.controlador.CatalogoYSesionControladorTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.310 s -- in tallernet.controlador.CatalogoYSesionControladorTest
+[INFO] Running tallernet.controlador.ClienteControladorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s -- in tallernet.controlador.ClienteControladorTest
+[INFO] Running tallernet.controlador.TurnoControladorTest
+[INFO] Running tallernet.controlador.TurnoControladorTest$Recepcion
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in tallernet.controlador.TurnoControladorTest$Recepcion
+[INFO] Running tallernet.controlador.TurnoControladorTest$Agenda
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in tallernet.controlador.TurnoControladorTest$Agenda
+[INFO] Running tallernet.controlador.TurnoControladorTest$Modificaciones
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in tallernet.controlador.TurnoControladorTest$Modificaciones
+[INFO] Running tallernet.controlador.TurnoControladorTest$Alta
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in tallernet.controlador.TurnoControladorTest$Alta
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 s -- in tallernet.controlador.TurnoControladorTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.util.AlgoritmosTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in tallernet.util.AlgoritmosTest
+[INFO] Running tallernet.modelo.AgendaDiariaTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in tallernet.modelo.AgendaDiariaTest
+[INFO] Running tallernet.modelo.LimitesTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in tallernet.modelo.LimitesTest
+[INFO] Running tallernet.modelo.TurnoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.modelo.TurnoTest
+[INFO] Running tallernet.modelo.ModeloTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in tallernet.modelo.ModeloTest
+[INFO] Running tallernet.modelo.ReporteSemanalTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in tallernet.modelo.ReporteSemanalTest
+[INFO] Running tallernet.modelo.RobustezTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in tallernet.modelo.RobustezTest
+[INFO] Running tallernet.archivos.ArchivosTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in tallernet.archivos.ArchivosTest
+[main] INFO org.testcontainers.DockerClientFactory - Testcontainers version: 1.21.4
+[main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[main] INFO org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+[main] INFO org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 29.4.3
+  API Version: 1.54
+  Operating System: Docker Desktop
+  Total Memory: 7936 MB
+  Labels: 
+    com.docker.desktop.address=unix://<home>/Library/Containers/com.docker.docker/Data/docker-cli.sock
+[main] INFO org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+[main] INFO org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[main] INFO tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+[main] INFO tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: 3f38be1deaa626109ec747bb5999008bcfb4035988716beee77c4c34fa4c635e
+[main] INFO tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.388112S
+[main] INFO org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[main] INFO org.testcontainers.DockerClientFactory - Checking the system...
+[main] INFO org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+[INFO] Running tallernet.persistencia.AltasContenedorTest
+[main] INFO tc.mysql:8.0 - Creating container for image: mysql:8.0
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 is starting: 734b7aa3a30ea8a32c23ec89f0a0e053b1a6c3be55afbbb1eb2df121de0ce3f4
+[main] INFO tc.mysql:8.0 - Waiting for database connection to become available at jdbc:mysql://localhost:52834/tallernet using query 'SELECT 1'
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 started in PT7.792681S
+[main] INFO tc.mysql:8.0 - Container is started (JDBC URL: jdbc:mysql://localhost:52834/tallernet)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.532 s -- in tallernet.persistencia.AltasContenedorTest
+[INFO] Running tallernet.persistencia.TraductorCodigosTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in tallernet.persistencia.TraductorCodigosTest
+[INFO] Running tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Running tallernet.persistencia.ConsultasContenedorTest
+[main] INFO tc.mysql:8.0 - Creating container for image: mysql:8.0
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 is starting: 42ddb3b998cf53b3ffb5e903ba8ede143555120e54ff647d68827de82c123c08
+[main] INFO tc.mysql:8.0 - Waiting for database connection to become available at jdbc:mysql://localhost:52914/tallernet using query 'SELECT 1'
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 started in PT6.700739S
+[main] INFO tc.mysql:8.0 - Container is started (JDBC URL: jdbc:mysql://localhost:52914/tallernet)
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.839 s -- in tallernet.persistencia.ConsultasContenedorTest
+[INFO] Running tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.715 s -- in tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Running tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.858 s -- in tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Running tallernet.vista.VistaAltasTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.278 s -- in tallernet.vista.VistaAltasTest
+[INFO] Running tallernet.vista.RecorridoContenedorTest
+[main] INFO tc.mysql:8.0 - Creating container for image: mysql:8.0
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 is starting: 9beb5cbee98d2c24c04651d20f9c5e058d6fd1404b13dc26bded8fb777d3da06
+[main] INFO tc.mysql:8.0 - Waiting for database connection to become available at jdbc:mysql://localhost:53135/tallernet using query 'SELECT 1'
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 started in PT7.523998S
+[main] INFO tc.mysql:8.0 - Container is started (JDBC URL: jdbc:mysql://localhost:53135/tallernet)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.731 s -- in tallernet.vista.RecorridoContenedorTest
+[INFO] Running tallernet.arquitectura.ArquitecturaTest
+[main] INFO com.tngtech.archunit.core.PluginLoader - Detected Java version 17.0.21.0.3
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.243 s -- in tallernet.arquitectura.ArquitecturaTest
+[INFO] Running tallernet.propiedades.PropiedadesTest
+timestamp = 2026-11-07T09:28:20.908176, PropiedadesTest:laBusquedaBinariaCoincideConLaLineal = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 30         | # of all combined edge cases
+edge-cases#tried = 30         | # of edge cases tried in current run
+seed = 7144656359909994430    | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:28:20.968226, PropiedadesTest:turnosDeDistintaSedeNuncaSeSuperponen = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 400        | # of all combined edge cases
+edge-cases#tried = 159        | # of edge cases tried in current run
+seed = 7887809333007515567    | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:28:20.989310, PropiedadesTest:losOrdenamientosProducenUnaPermutacionOrdenada = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 10         | # of all combined edge cases
+edge-cases#tried = 10         | # of edge cases tried in current run
+seed = -7775514147206364958   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:28:21.017448, PropiedadesTest:laGrillaNuncaSaleDeRangoYCuentaBien = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 6          | # of all combined edge cases
+edge-cases#tried = 6          | # of edge cases tried in current run
+seed = -7746746687270627440   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:28:21.041177, PropiedadesTest:laSuperposicionEsSimetrica = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 400        | # of all combined edge cases
+edge-cases#tried = 151        | # of edge cases tried in current run
+seed = 4739885860153243858    | random seed to reproduce generated values
+
+
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.281 s -- in tallernet.propiedades.PropiedadesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 190, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ tallernet ---
+[INFO] 
+[INFO] --- shade:3.5.3:shade (default) @ tallernet ---
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Including com.mysql:mysql-connector-j:jar:8.4.0 in the shaded jar.
+[INFO] Including com.google.protobuf:protobuf-java:jar:3.25.1 in the shaded jar.
+[WARNING] protobuf-java-3.25.1.jar, tallernet.jar define 746 overlapping classes and resources: 
+[WARNING]   - com.google.protobuf.AbstractMessage
+[WARNING]   - com.google.protobuf.AbstractMessage$Builder
+[WARNING]   - com.google.protobuf.AbstractMessage$BuilderParent
+[WARNING]   - com.google.protobuf.AbstractMessageLite
+[WARNING]   - com.google.protobuf.AbstractMessageLite$Builder
+[WARNING]   - com.google.protobuf.AbstractMessageLite$Builder$LimitedInputStream
+[WARNING]   - com.google.protobuf.AbstractMessageLite$InternalOneOfEnum
+[WARNING]   - com.google.protobuf.AbstractParser
+[WARNING]   - com.google.protobuf.AbstractProtobufList
+[WARNING]   - com.google.protobuf.AllocatedBuffer
+[WARNING]   - 736 more...
+[WARNING] mysql-connector-j-8.4.0.jar, tallernet.jar define 1093 overlapping classes and resources: 
+[WARNING]   - INFO_BIN
+[WARNING]   - INFO_SRC
+[WARNING]   - LICENSE
+[WARNING]   - META-INF/services/java.sql.Driver
+[WARNING]   - README
+[WARNING]   - com.mysql.cj.AbstractQuery
+[WARNING]   - com.mysql.cj.BindValue
+[WARNING]   - com.mysql.cj.CacheAdapter
+[WARNING]   - com.mysql.cj.CacheAdapterFactory
+[WARNING]   - com.mysql.cj.CancelQueryTask
+[WARNING]   - 1083 more...
+[WARNING] maven-shade-plugin has detected that some files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the file is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See https://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing <proyecto>/target/tallernet.jar with <proyecto>/target/tallernet-0.4.0-shaded.jar
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (informe) @ tallernet ---
+[INFO] Loading execution data file <proyecto>/target/jacoco.exec
+[INFO] Analyzed bundle 'TALLERNET - Proyecto integrador AP4' with 64 classes
+[INFO] 
+[INFO] --- jacoco:0.8.12:check (puerta) @ tallernet ---
+[INFO] Loading execution data file <proyecto>/target/jacoco.exec
+[INFO] Analyzed bundle 'tallernet' with 64 classes
+[INFO] All coverage checks have been met.
+[INFO] 
+[INFO] --- pitest:1.17.4:mutationCoverage (mutacion) @ tallernet ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Root dir is : <proyecto>
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.10.2 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from <proyecto>/target/classes
+[INFO] Replacing properties in argLine "-javaagent:<home>/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=<proyecto>/target/jacoco.exec" @{argLine} -Dfile.encoding=UTF-8 -XX:+EnableDynamicAgentLoading
+9:28:23 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+9:28:23 AM PIT >> INFO : Created 31 mutation test units in pre scan
+9:28:23 AM PIT >> INFO : Sending 87 test classes to minion
+9:28:23 AM PIT >> INFO : Sent tests to minion
+/-\|/9:28:24 AM PIT >> INFO : MINION : [main] INFO com.tngtech.archunit.core.PluginLoader - Detected Java version 17.0.21.0.3
+9:28:25 AM PIT >> INFO : MINION : OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\9:28:29 AM PIT >> INFO : Calculated coverage in 6 seconds.
+9:28:29 AM PIT >> INFO : Created 26 mutation test units
+/-\|/-\|/9:29:23 AM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+9:29:27 AM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+-\|/-\|/-\|/-\|/-9:30:03 AM PIT >> INFO : Completed in 100 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 42 Killed 30 (71%)
+> KILLED 30 SURVIVED 12 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 4 Killed 3 (75%)
+> KILLED 3 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 25 Killed 20 (80%)
+> KILLED 20 SURVIVED 5 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 50 Killed 39 (78%)
+> KILLED 39 SURVIVED 6 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 13 Killed 10 (77%)
+> KILLED 10 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 78 Killed 59 (76%)
+> KILLED 59 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 16 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 46 Killed 44 (96%)
+> KILLED 42 SURVIVED 2 TIMED_OUT 2 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 50 Killed 28 (56%)
+> KILLED 28 SURVIVED 9 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 13 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 2 Killed 1 (50%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 141 Killed 126 (89%)
+> KILLED 126 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 13 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 6 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 1 minutes and 33 seconds
+--------------------------------------------------------------------------------
+> Total  : 1 minutes and 40 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 622/732 (85%)
+>> 87 tests examined
+>> Generated 451 mutations Killed 360 (80%)
+>> Mutations with no coverage 49. Test strength 90%
+>> Ran 1063 tests (2.36 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] 
+[INFO] >>> spotbugs:4.8.6.6:check (spotbugs) > :spotbugs @ tallernet >>>
+[INFO] 
+[INFO] --- spotbugs:4.8.6.6:spotbugs (spotbugs) @ tallernet ---
+[INFO] Fork Value is true
+     [java] The following errors occurred during analysis:
+     [java]   Error analyzing public static void main(String[] args) (class: tallernet.Main)
+     [java]     edu.umd.cs.findbugs.ba.DataflowAnalysisException: Accessing TOP or BOTTOM frame!
+     [java]       At edu.umd.cs.findbugs.ba.Frame.getStackValue(Frame.java:243)
+     [java]       At edu.umd.cs.findbugs.detect.FindUselessObjects$UselessValuesContext.initObservedValues(FindUselessObjects.java:144)
+     [java]       At edu.umd.cs.findbugs.detect.FindUselessObjects.analyzeMethod(FindUselessObjects.java:461)
+     [java]       At edu.umd.cs.findbugs.detect.FindUselessObjects.visitClassContext(FindUselessObjects.java:451)
+     [java]       At edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)
+     [java]       At edu.umd.cs.findbugs.FindBugs2.lambda$analyzeApplication$1(FindBugs2.java:1108)
+     [java]       At java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+     [java]       At edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)
+     [java]       At java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:247)
+     [java]       At edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)
+     [java]       At edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)
+     [java]       At edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)
+     [java]       At edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)
+     [java] The following classes needed for analysis were missing:
+     [java]   equals
+     [java]   toString
+     [java]   hashCode
+     [java]   apply
+     [java]   registrar
+     [java]   makeConcatWithConstants
+     [java]   asignar
+     [java]   applyAsInt
+     [java]   test
+     [java]   get
+     [java]   ejecutar
+     [java]   accept
+     [java]   mapear
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.8.6.6:check (spotbugs) < :spotbugs @ tallernet <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.8.6.6:check (spotbugs) @ tallernet ---
+[INFO] BugInstance size is 44
+[INFO] Error size is 0
+[INFO] Total bugs: 44
+[ERROR] Low: Improper handling of Unicode transformations such as case mapping and normalization. [tallernet.archivos.AgendaCsv] At AgendaCsv.java:[line 24] IMPROPER_UNICODE
+[ERROR] Medium: tallernet.archivos.ImportadorClientesCsv$Resultado.rechazos() may expose internal representation by returning ImportadorClientesCsv$Resultado.rechazos [tallernet.archivos.ImportadorClientesCsv$Resultado] At ImportadorClientesCsv.java:[line 38] EI_EXPOSE_REP
+[ERROR] Medium: tallernet.archivos.ImportadorClientesCsv$Resultado.registrados() may expose internal representation by returning ImportadorClientesCsv$Resultado.registrados [tallernet.archivos.ImportadorClientesCsv$Resultado] At ImportadorClientesCsv.java:[line 38] EI_EXPOSE_REP
+[ERROR] Medium: new tallernet.archivos.ImportadorClientesCsv$Resultado(int, List, List) may expose internal representation by storing an externally mutable object into ImportadorClientesCsv$Resultado.rechazos [tallernet.archivos.ImportadorClientesCsv$Resultado] At ImportadorClientesCsv.java:[line 38] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.archivos.ImportadorClientesCsv$Resultado(int, List, List) may expose internal representation by storing an externally mutable object into ImportadorClientesCsv$Resultado.registrados [tallernet.archivos.ImportadorClientesCsv$Resultado] At ImportadorClientesCsv.java:[line 38] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.CatalogoControlador(Dao, Dao, TurnoRepositorio, RegistroOperaciones) may expose internal representation by storing an externally mutable object into CatalogoControlador.sedes [tallernet.controlador.CatalogoControlador] At CatalogoControlador.java:[line 63] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.CatalogoControlador(Dao, Dao, TurnoRepositorio, RegistroOperaciones) may expose internal representation by storing an externally mutable object into CatalogoControlador.servicios [tallernet.controlador.CatalogoControlador] At CatalogoControlador.java:[line 64] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.CatalogoControlador(Dao, Dao, TurnoRepositorio, RegistroOperaciones) may expose internal representation by storing an externally mutable object into CatalogoControlador.turnos [tallernet.controlador.CatalogoControlador] At CatalogoControlador.java:[line 65] EI_EXPOSE_REP2
+[ERROR] Medium: tallernet.controlador.CatalogoControlador$ProximoService.turno() may expose internal representation by returning CatalogoControlador$ProximoService.turno [tallernet.controlador.CatalogoControlador$ProximoService] At CatalogoControlador.java:[line 48] EI_EXPOSE_REP
+[ERROR] Medium: new tallernet.controlador.CatalogoControlador$ProximoService(Turno, OptionalInt) may expose internal representation by storing an externally mutable object into CatalogoControlador$ProximoService.turno [tallernet.controlador.CatalogoControlador$ProximoService] At CatalogoControlador.java:[line 48] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.ClienteControlador(Dao, VehiculoRepositorio, TurnoRepositorio, RegistroOperaciones) may expose internal representation by storing an externally mutable object into ClienteControlador.clientes [tallernet.controlador.ClienteControlador] At ClienteControlador.java:[line 77] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.ClienteControlador(Dao, VehiculoRepositorio, TurnoRepositorio, RegistroOperaciones) may expose internal representation by storing an externally mutable object into ClienteControlador.turnos [tallernet.controlador.ClienteControlador] At ClienteControlador.java:[line 79] EI_EXPOSE_REP2
+[ERROR] Medium: tallernet.controlador.ClienteControlador$ListadoClientes.clientes() may expose internal representation by returning ClienteControlador$ListadoClientes.clientes [tallernet.controlador.ClienteControlador$ListadoClientes] At ClienteControlador.java:[line 57] EI_EXPOSE_REP
+[ERROR] Medium: new tallernet.controlador.ClienteControlador$ListadoClientes(List, String, long) may expose internal representation by storing an externally mutable object into ClienteControlador$ListadoClientes.clientes [tallernet.controlador.ClienteControlador$ListadoClientes] At ClienteControlador.java:[line 57] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.SesionControlador(Dao) may expose internal representation by storing an externally mutable object into SesionControlador.empleados [tallernet.controlador.SesionControlador] At SesionControlador.java:[line 19] EI_EXPOSE_REP2
+[ERROR] Medium: tallernet.controlador.SistemaControlador.getBitacora() may expose internal representation by returning SistemaControlador.bitacora [tallernet.controlador.SistemaControlador] At SistemaControlador.java:[line 28] EI_EXPOSE_REP
+[ERROR] Medium: new tallernet.controlador.SistemaControlador(Bitacora) may expose internal representation by storing an externally mutable object into SistemaControlador.bitacora [tallernet.controlador.SistemaControlador] At SistemaControlador.java:[line 15] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.TurnoControlador(TurnoRepositorio, VehiculoRepositorio, Dao, Dao, ValidadorTurno, RegistroOperaciones) may expose internal representation by storing an externally mutable object into TurnoControlador.sedes [tallernet.controlador.TurnoControlador] At TurnoControlador.java:[line 65] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.TurnoControlador(TurnoRepositorio, VehiculoRepositorio, Dao, Dao, ValidadorTurno, RegistroOperaciones) may expose internal representation by storing an externally mutable object into TurnoControlador.servicios [tallernet.controlador.TurnoControlador] At TurnoControlador.java:[line 66] EI_EXPOSE_REP2
+[ERROR] Medium: new tallernet.controlador.TurnoControlador(TurnoRepositorio, VehiculoRepositorio, Dao, Dao, ValidadorTurno, RegistroOperaciones) may expose internal representation by storing an externally mutable object into TurnoControlador.turnos [tallernet.controlador.TurnoControlador] At TurnoControlador.java:[line 63] EI_EXPOSE_REP2
+[ERROR] Low: Return value of java.util.Queue.poll() ignored in tallernet.controlador.TurnoControlador.atenderSiguiente() [tallernet.controlador.TurnoControlador, tallernet.controlador.TurnoControlador] At TurnoControlador.java:[line 225]Another occurrence at TurnoControlador.java:[line 229] RV_RETURN_VALUE_IGNORED
+[ERROR] Low: Exceptional return value of java.util.Queue.offer(Object) ignored in tallernet.controlador.TurnoControlador.registrarLlegada(int) [tallernet.controlador.TurnoControlador] At TurnoControlador.java:[line 209] RV_RETURN_VALUE_IGNORED_BAD_PRACTICE
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Cliente at new tallernet.modelo.Cliente(int, String, String, String, String, LocalDateTime) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Cliente, tallernet.modelo.Cliente] At Cliente.java:[line 23]At Cliente.java:[line 23] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Cliente at new tallernet.modelo.Cliente(String, String, String, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Cliente, tallernet.modelo.Cliente] At Cliente.java:[line 31]At Cliente.java:[line 31] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: The regular expression "^[\\w.+-]+@[\\w-]+(\\.[\\w-]+)+$" is vulnerable to a denial of service attack (ReDOS) [tallernet.modelo.Cliente] At Cliente.java:[line 13] REDOS
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Empleado at new tallernet.modelo.Empleado(int, int, String, String, Rol, boolean) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Empleado, tallernet.modelo.Empleado] At Empleado.java:[line 16]At Empleado.java:[line 16] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Persona at new tallernet.modelo.Persona(int, String, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Persona, tallernet.modelo.Persona] At Persona.java:[line 19]At Persona.java:[line 19] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Sede at new tallernet.modelo.Sede(int, String, String, LocalTime, LocalTime, boolean) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Sede, tallernet.modelo.Sede] At Sede.java:[line 21]At Sede.java:[line 21] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Servicio at new tallernet.modelo.Servicio(int, String, BigDecimal, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Servicio, tallernet.modelo.Servicio] At Servicio.java:[line 27]At Servicio.java:[line 27] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.ServicioPorKilometraje at new tallernet.modelo.ServicioPorKilometraje(int, String, BigDecimal, int, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.ServicioPorKilometraje, tallernet.modelo.ServicioPorKilometraje] At ServicioPorKilometraje.java:[line 17]At ServicioPorKilometraje.java:[line 17] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Turno at new tallernet.modelo.Turno(int, Sede, Vehiculo, Servicio, int, LocalDateTime, EstadoTurno, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Turno, tallernet.modelo.Turno] At Turno.java:[line 38]At Turno.java:[line 38] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Turno at new tallernet.modelo.Turno(Sede, Vehiculo, Servicio, int, LocalDateTime, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Turno, tallernet.modelo.Turno] At Turno.java:[line 47]At Turno.java:[line 47] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: tallernet.modelo.Turno.getServicio() may expose internal representation by returning Turno.servicio [tallernet.modelo.Turno] At Turno.java:[line 94] EI_EXPOSE_REP
+[ERROR] Medium: tallernet.modelo.Turno.getVehiculo() may expose internal representation by returning Turno.vehiculo [tallernet.modelo.Turno] At Turno.java:[line 90] EI_EXPOSE_REP
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Vehiculo at new tallernet.modelo.Vehiculo(int, int, String, String, String, int, int, LocalDateTime) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Vehiculo, tallernet.modelo.Vehiculo] At Vehiculo.java:[line 31]At Vehiculo.java:[line 31] CT_CONSTRUCTOR_THROW
+[ERROR] Medium: Exception thrown in class tallernet.modelo.Vehiculo at new tallernet.modelo.Vehiculo(int, String, String, String, int, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks. [tallernet.modelo.Vehiculo, tallernet.modelo.Vehiculo] At Vehiculo.java:[line 42]At Vehiculo.java:[line 42] CT_CONSTRUCTOR_THROW
+[ERROR] Low: This use of java/sql/Connection.prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement; can be vulnerable to SQL injection (with JDBC) [tallernet.persistencia.DaoJdbc] At DaoJdbc.java:[line 88] SQL_INJECTION_JDBC
+[ERROR] Low: This use of java/sql/Connection.prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement; can be vulnerable to SQL injection (with JDBC) [tallernet.persistencia.DaoJdbc, tallernet.persistencia.DaoJdbc, tallernet.persistencia.TurnoDAO] At DaoJdbc.java:[line 49]At DaoJdbc.java:[line 76]At TurnoDAO.java:[line 290] SQL_INJECTION_JDBC
+[ERROR] Medium: Class tallernet.persistencia.TraductorSQLException is not derived from an Exception, even though it is named as such [tallernet.persistencia.TraductorSQLException] At TraductorSQLException.java:[lines 31-92] NM_CLASS_NOT_EXCEPTION
+[ERROR] Low: This use of java/sql/Connection.prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement; can be vulnerable to SQL injection (with JDBC) [tallernet.persistencia.TurnoDAO] At TurnoDAO.java:[line 134] SQL_INJECTION_JDBC
+[ERROR] Low: This use of java/sql/Connection.prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement; can be vulnerable to SQL injection (with JDBC) [tallernet.persistencia.VehiculoDAO] At VehiculoDAO.java:[line 70] SQL_INJECTION_JDBC
+[ERROR] Medium: new tallernet.vista.LectorEntrada(InputStream, Charset, PrintStream, boolean) may expose internal representation by storing an externally mutable object into LectorEntrada.salida [tallernet.vista.LectorEntrada] At LectorEntrada.java:[line 34] EI_EXPOSE_REP2
+[ERROR] Low: Improper handling of Unicode transformations such as case mapping and normalization. [tallernet.vista.LectorEntrada] At LectorEntrada.java:[line 67] IMPROPER_UNICODE
+[ERROR] Medium: new tallernet.vista.VistaConsola(TurnoControlador, ClienteControlador, CatalogoControlador, SesionControlador, ArchivoControlador, SistemaControlador, LectorEntrada, PrintStream) may expose internal representation by storing an externally mutable object into VistaConsola.out [tallernet.vista.VistaConsola] At VistaConsola.java:[line 77] EI_EXPOSE_REP2
+[INFO] 
+
+
+To see bug detail using the Spotbugs GUI, use the following command "mvn spotbugs:gui"
+
+
+
+[INFO] 
+[INFO] >>> pmd:3.26.0:check (pmd) > :pmd @ tallernet >>>
+[INFO] 
+[INFO] --- pmd:3.26.0:pmd (pmd) @ tallernet ---
+[INFO] PMD version: 7.7.0
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.0.0-M9 skin
+[INFO] 
+[INFO] <<< pmd:3.26.0:check (pmd) < :pmd @ tallernet <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.26.0:check (pmd) @ tallernet ---
+[INFO] 
+[INFO] >>> pmd:3.26.0:cpd-check (pmd) > :cpd @ tallernet >>>
+[INFO] 
+[INFO] --- pmd:3.26.0:cpd (cpd) @ tallernet ---
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.0.0-M9 skin
+[INFO] 
+[INFO] <<< pmd:3.26.0:cpd-check (pmd) < :cpd @ tallernet <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.26.0:cpd-check (pmd) @ tallernet ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (checkstyle) @ tallernet ---
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to jvnet-nexus-releases (https://maven.java.net/content/repositories/releases/): (certificate_expired) PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:28 min
+[INFO] Finished at: 2026-11-07T09:30:13-03:00
+[INFO] ------------------------------------------------------------------------

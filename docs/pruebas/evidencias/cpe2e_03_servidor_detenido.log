@@ -1,0 +1,67 @@
+spawn java -Dtallernet.config=<proyecto>/db.properties -Dtallernet.datos=/tmp/tallernet_e2e -jar <proyecto>/target/tallernet.jar
+================================================================
+  TALLERNET - Talleres Ruiz Díaz | Gestión de turnos multi-sede
+================================================================
+Personal habilitado para registrar turnos:
+  1. Ruiz Díaz, Mario - Administrador (sede 1)
+  2. Medina, Carla - Recepcionista (sede 1)
+  3. Acosta, Julián - Recepcionista (sede 2)
+Ingrese su número de empleado: 2
+Sesión iniciada: Carla Medina (Recepcionista).
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 2
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Ana
+Apellido: Corte
+Teléfono: 11-4444-7777
+Correo electrónico (opcional): 
+  [SIN CONEXIÓN] No se pudo conectar con el servidor central de TALLERNET (127.0.0.1:3307/tallernet). Verifique Internet, la VPN de la sede y el archivo db.properties.
+  Resultado: el cliente no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 0
+Sesión finalizada. ¡Hasta luego!
+
+RESULTADO CPE2E-03: APROBADO

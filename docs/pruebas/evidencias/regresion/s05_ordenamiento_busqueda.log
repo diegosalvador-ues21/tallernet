@@ -1,0 +1,134 @@
+(Fecha de referencia fijada para pruebas: 2026-10-01T08:00)
+================================================================
+  TALLERNET - Talleres Ruiz Díaz | Gestión de turnos multi-sede
+================================================================
+Personal habilitado para registrar turnos:
+  1. Ruiz Díaz, Mario - Administrador (sede 1)
+  2. Medina, Carla - Recepcionista (sede 1)
+  3. Acosta, Julián - Recepcionista (sede 2)
+Ingrese su número de empleado: 2
+Sesión iniciada: Carla Medina (Recepcionista).
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 2
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 3
+  1. Por apellido y nombre   2. Por fecha de alta
+Criterio: 1
+  5 clientes ordenados por apellido y nombre (quicksort, 8 comparaciones):
+  N.° 3    Benítez, Sofía               11-6012-3344
+  N.° 4    Fernández, Ricardo           11-3890-7788
+  N.° 1    Gómez, Laura                 11-4567-8901
+  N.° 5    Herrera, Paula               11-5555-0101
+  N.° 2    Pereyra, Martín              11-5234-1122
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 3
+  1. Por apellido y nombre   2. Por fecha de alta
+Criterio: 2
+  5 clientes ordenados por fecha de alta (inserción, 4 comparaciones):
+  N.° 1    Gómez, Laura                 11-4567-8901
+  N.° 2    Pereyra, Martín              11-5234-1122
+  N.° 3    Benítez, Sofía               11-6012-3344
+  N.° 4    Fernández, Ricardo           11-3890-7788
+  N.° 5    Herrera, Paula               11-5555-0101
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 4
+Patente a buscar: AF789GH
+  Encontrado: AF789GH - Renault Sandero 2022 (24.300 km al alta)
+  Titular:    Benítez, Sofía (tel. 11-6012-3344)
+  Comparaciones sobre 6 vehículos: búsqueda binaria 3 (lista ordenada por patente), búsqueda lineal 4 (lista sin ordenar).
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 4
+Patente a buscar: ZZ999ZZ
+  No hay un vehículo con la patente ZZ999ZZ.
+  Comparaciones sobre 6 vehículos: búsqueda binaria 3 (lista ordenada por patente), búsqueda lineal 6 (lista sin ordenar).
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 5
+Patente: AE123BC
+  Historial de AE123BC en ambas sedes (2 turnos):
+  05/10/2026 09:00  Sede Echeandía  Cambio de aceite y filtros       CONFIRMADO
+  21/09/2026 11:00  Sede Flores     Diagnóstico por escáner (OBD-II) ATENDIDO
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 0
+Sesión finalizada. ¡Hasta luego!

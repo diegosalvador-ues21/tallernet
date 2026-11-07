@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+# CPE2E-02 - Ctrl-D (fin de entrada) en medio de un alta: el programa debe cerrar la sesión en
+# forma ordenada, sin informar un error interno.
+# Uso: expect fin_de_entrada.exp <jar> <db.properties>
+set timeout 20
+set jar [lindex $argv 0]
+set cfg [lindex $argv 1]
+spawn java -Dtallernet.config=$cfg -Dtallernet.datos=/tmp/tallernet_e2e -jar $jar
+expect "empleado: " { send "2\r" }
+expect "opción: "   { send "2\r" }
+expect "opción: "   { send "1\r" }
+expect "Nombre: "   { send "Ana\r" }
+expect "Apellido: " { send "\004" }
+set interno 0
+expect {
+    "ERROR INTERNO" { set interno 1; exp_continue }
+    "Fin de la entrada. Sesión cerrada." { }
+    timeout { puts "\nTIMEOUT"; exit 2 }
+}
+expect eof
+if {$interno == 0} { puts "\nRESULTADO CPE2E-02: APROBADO"; exit 0 } else { puts "\nRESULTADO CPE2E-02: FALLADO (error interno)"; exit 1 }

@@ -1,0 +1,16 @@
+COBERTURA JaCoCo
+  tallernet                líneas   0.0% (0/44)  ramas   0.0%
+  tallernet.archivos       líneas  92.8% (155/167)  ramas  86.0%
+  tallernet.conexion       líneas  61.0% (36/59)  ramas  37.5%
+  tallernet.controlador    líneas  95.0% (307/323)  ramas  81.5%
+  tallernet.excepciones    líneas 100.0% (22/22)  ramas   0.0%
+  tallernet.modelo         líneas  95.0% (325/342)  ramas  85.7%
+  tallernet.persistencia   líneas  89.3% (291/326)  ramas  84.4%
+  tallernet.util           líneas 100.0% (66/66)  ramas 100.0%
+  tallernet.vista          líneas  92.3% (454/492)  ramas  89.3%
+  TOTAL líneas 90.0% ramas 83.4%
+PIT {'KILLED': 358, 'SURVIVED': 42, 'NO_COVERAGE': 49, 'TIMED_OUT': 2}
+SpotBugs {'IMPROPER_UNICODE': 2, 'EI_EXPOSE_REP': 7, 'EI_EXPOSE_REP2': 16, 'RV_RETURN_VALUE_IGNORED': 1, 'RV_RETURN_VALUE_IGNORED_BAD_PRACTICE': 1, 'CT_CONSTRUCTOR_THROW': 11, 'REDOS': 1, 'SQL_INJECTION_JDBC': 4, 'NM_CLASS_NOT_EXCEPTION': 1}
+PMD 0
+CPD 0
+Surefire {'tests': 193, 'fallas': 0, 'clases': 27}

@@ -1,0 +1,15 @@
+[INFO]  T E S T S
+[INFO] Running tallernet.util.AlgoritmosTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in tallernet.util.AlgoritmosTest
+[INFO] Running tallernet.modelo.TurnoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in tallernet.modelo.TurnoTest
+[INFO] Running tallernet.modelo.ModeloTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in tallernet.modelo.ModeloTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s - in tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.412 s - in tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Tests run: 37, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+[INFO] Total time:  13.787 s
+[INFO] Finished at: 2026-10-18T14:49:00-03:00

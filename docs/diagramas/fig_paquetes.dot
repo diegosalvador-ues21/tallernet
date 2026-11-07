@@ -1,0 +1,19 @@
+digraph G {
+  graph [fontname="Carlito", fontsize=11, rankdir=TB, nodesep=0.35, ranksep=0.55, bgcolor="white", pad=0.2];
+  node [shape=plaintext, fontname="Carlito", fontsize=10, fontcolor="#212121"];
+  edge [fontname="Carlito", fontsize=9, color="#616161", fontcolor="#616161"];
+  node [shape=tab, style=filled, fillcolor="#e0f2f1", color="#004d40", fontcolor="#212121", fontsize=11];
+  vista [label="vista\nVistaConsola, LectorEntrada"];
+  controlador [label="controlador\nTurnoControlador, ValidadorTurno, SesionControlador,\nClienteControlador, CatalogoControlador"];
+  persistencia [label="persistencia\nDao, repositorios, DaoJdbc, DAOs"];
+  conexion [label="conexion\nConexionBD (Singleton)"];
+  modelo [label="modelo\nPersona, Cliente, Empleado, Sede,\nVehiculo, Servicio (+2), Turno, enums"];
+  excepciones [label="excepciones\nTallerNetException y subclases"];
+  util [label="util\nOrdenamiento, Busqueda, Formatos"];
+  db [shape=cylinder, fillcolor="white", label="MySQL 8.0\nbase tallernet"];
+  vista -> controlador; controlador -> persistencia; persistencia -> conexion; conexion -> db [label=" JDBC / TLS"];
+  vista -> modelo [style=dashed]; controlador -> modelo [style=dashed]; persistencia -> modelo [style=dashed];
+  controlador -> util [style=dashed]; vista -> excepciones [style=dashed]; controlador -> excepciones [style=dashed];
+  persistencia -> excepciones [style=dashed];
+  {rank=same; modelo; util; excepciones}
+}

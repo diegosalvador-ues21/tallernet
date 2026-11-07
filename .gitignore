@@ -1,0 +1,9 @@
+target/
+db.properties
+*.class
+.idea/
+nbproject/private/
+.DS_Store
+build/
+logs/
+exportaciones/

@@ -1,0 +1,184 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< tallernet:tallernet >-------------------------
+[INFO] Building TALLERNET - Proyecto integrador AP4 0.4.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24399 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/mysql/1.21.4/mysql-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/mysql/1.21.4/mysql-1.21.4.pom (1.5 kB at 8.5 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.pom (1.5 kB at 8.6 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.pom (1.5 kB at 27 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.pom (2.6 kB at 46 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.pom (1.5 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/mysql/1.21.4/mysql-1.21.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/mysql/1.21.4/mysql-1.21.4.jar (9.0 kB at 174 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.jar (15 kB at 271 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.jar (30 kB at 522 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.jar (15 kB at 114 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.jar (18 MB at 20 MB/s)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tallernet ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ tallernet ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 59 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tallernet ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ tallernet ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 18 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ tallernet ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running tallernet.controlador.ClienteControladorTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.697 s -- in tallernet.controlador.ClienteControladorTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in tallernet.controlador.ValidadorTurnoTest$Cpc03
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in tallernet.controlador.ValidadorTurnoTest
+[INFO] Running tallernet.util.AlgoritmosTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in tallernet.util.AlgoritmosTest
+[INFO] Running tallernet.modelo.AgendaDiariaTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in tallernet.modelo.AgendaDiariaTest
+[INFO] Running tallernet.modelo.LimitesTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in tallernet.modelo.LimitesTest
+[INFO] Running tallernet.modelo.TurnoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.modelo.TurnoTest
+[INFO] Running tallernet.modelo.ModeloTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in tallernet.modelo.ModeloTest
+[INFO] Running tallernet.modelo.ReporteSemanalTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.modelo.ReporteSemanalTest
+[INFO] Running tallernet.archivos.ArchivosTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in tallernet.archivos.ArchivosTest
+[main] INFO org.testcontainers.DockerClientFactory - Testcontainers version: 1.21.4
+[main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[main] INFO org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+[main] INFO org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 29.4.3
+  API Version: 1.54
+  Operating System: Docker Desktop
+  Total Memory: 7936 MB
+  Labels: 
+    com.docker.desktop.address=unix://<home>/Library/Containers/com.docker.docker/Data/docker-cli.sock
+[main] INFO org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+[main] INFO org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[main] INFO tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+[main] INFO tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: 2d1bcb1c20e787581c4d519cef6bbb438b1a0a8325b6bbe2b6c093d06951451c
+[main] INFO tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.251832S
+[main] INFO org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[main] INFO org.testcontainers.DockerClientFactory - Checking the system...
+[main] INFO org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+[INFO] Running tallernet.persistencia.AltasContenedorTest
+[main] INFO tc.mysql:8.0 - Creating container for image: mysql:8.0
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 is starting: 7ede56ffeea02784e561736569a37735fcff88538fed928870cdcd5a88ffd1e3
+[main] INFO tc.mysql:8.0 - Waiting for database connection to become available at jdbc:mysql://localhost:65284/tallernet using query 'SELECT 1'
+[main] INFO tc.mysql:8.0 - Container mysql:8.0 started in PT7.576829S
+[main] INFO tc.mysql:8.0 - Container is started (JDBC URL: jdbc:mysql://localhost:65284/tallernet)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.272 s -- in tallernet.persistencia.AltasContenedorTest
+[INFO] Running tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in tallernet.persistencia.TraductorSQLExceptionTest
+[INFO] Running tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.372 s -- in tallernet.persistencia.PersistenciaTp4IntegracionTest
+[INFO] Running tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.810 s -- in tallernet.persistencia.TurnoDAOIntegracionTest
+[INFO] Running tallernet.vista.VistaAltasTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.213 s -- in tallernet.vista.VistaAltasTest
+[INFO] Running tallernet.arquitectura.ArquitecturaTest
+[main] INFO com.tngtech.archunit.core.PluginLoader - Detected Java version 17.0.21.0.3
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.909 s -- in tallernet.arquitectura.ArquitecturaTest
+[INFO] Running tallernet.propiedades.PropiedadesTest
+timestamp = 2026-11-07T09:11:36.568936, PropiedadesTest:laBusquedaBinariaCoincideConLaLineal = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 30         | # of all combined edge cases
+edge-cases#tried = 29         | # of edge cases tried in current run
+seed = -5422680154842704183   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:11:36.619223, PropiedadesTest:turnosDeDistintaSedeNuncaSeSuperponen = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 400        | # of all combined edge cases
+edge-cases#tried = 148        | # of edge cases tried in current run
+seed = 1876982364590615146    | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:11:36.640561, PropiedadesTest:losOrdenamientosProducenUnaPermutacionOrdenada = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 10         | # of all combined edge cases
+edge-cases#tried = 10         | # of edge cases tried in current run
+seed = -1010004233804508758   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:11:36.672939, PropiedadesTest:laGrillaNuncaSaleDeRangoYCuentaBien = 
+                              |-----------------------jqwik-----------------------
+tries = 500                   | # of calls to property
+checks = 500                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 6          | # of all combined edge cases
+edge-cases#tried = 6          | # of edge cases tried in current run
+seed = -7648016711468889827   | random seed to reproduce generated values
+
+
+timestamp = 2026-11-07T09:11:36.696977, PropiedadesTest:laSuperposicionEsSimetrica = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 400        | # of all combined edge cases
+edge-cases#tried = 179        | # of edge cases tried in current run
+seed = 1686133103077253998    | random seed to reproduce generated values
+
+
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.248 s -- in tallernet.propiedades.PropiedadesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 120, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.900 s
+[INFO] Finished at: 2026-11-07T09:11:36-03:00
+[INFO] ------------------------------------------------------------------------

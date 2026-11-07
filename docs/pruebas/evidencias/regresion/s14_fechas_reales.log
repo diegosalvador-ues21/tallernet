@@ -1,0 +1,1062 @@
+================================================================
+  TALLERNET - Talleres Ruiz Díaz | Gestión de turnos multi-sede
+================================================================
+Personal habilitado para registrar turnos:
+  1. Ruiz Díaz, Mario - Administrador (sede 1)
+  2. Medina, Carla - Recepcionista (sede 1)
+  3. Acosta, Julián - Recepcionista (sede 2)
+Ingrese su número de empleado: 2
+Sesión iniciada: Carla Medina (Recepcionista).
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 6
+
+----------------------------------------------------------------
+  SISTEMA
+----------------------------------------------------------------
+  1. Probar conexión con el servidor central
+  2. Ver las últimas operaciones (bitácora)
+  0. Volver
+Elija una opción: 1
+  Conexión correcta con el servidor central.
+  Servidor:  127.0.0.1:3307/tallernet
+  Usuario:   tallernet_app
+  Motor:     MySQL 8.0.46
+  Driver:    MySQL Connector/J mysql-connector-j-8.4.0 (Revision: 1c3f5c149e0bfe31c7fbeb24e2d260cd890972c4)
+  Cifrado:   TLS (TLS_AES_256_GCM_SHA384)
+  Respuesta: 17 ms
+
+----------------------------------------------------------------
+  SISTEMA
+----------------------------------------------------------------
+  1. Probar conexión con el servidor central
+  2. Ver las últimas operaciones (bitácora)
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 2
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Lucía
+Apellido: Fernández Ríos
+Teléfono: 11-4455-6677
+Correo electrónico (opcional): lucia.fr@mail.com
+  Cliente N.° 5 registrado: Fernández Ríos, Lucía
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 5
+  Titular: N.° 5 Fernández Ríos, Lucía
+Patente: AH123XY
+Marca: Peugeot
+Modelo: 208
+Año: 2023
+Kilometraje actual: 15.300
+  Vehículo N.° 6 registrado: AH123XY - Peugeot 208 2023 (15.300 km al alta)
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 5
+  Titular: N.° 5 Fernández Ríos, Lucía
+Patente: AH999ZZ
+Marca: Fiat
+Modelo: Pulse
+Año: 2024
+Kilometraje actual: -200
+  [!] El kilometraje debe estar entre 0 y 2000000 km.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 5
+  Titular: N.° 5 Fernández Ríos, Lucía
+Patente: AE123BC
+Marca: Ford
+Modelo: Ka
+Año: 2015
+Kilometraje actual: 1000
+  [!] Ya existe un vehículo con la patente AE123BC.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 3
+  1. Por apellido y nombre   2. Por fecha de alta
+Criterio: 1
+  5 clientes ordenados por apellido y nombre (quicksort, 8 comparaciones):
+  N.° 3    Benítez, Sofía               11-6012-3344
+  N.° 4    Fernández, Ricardo           11-3890-7788
+  N.° 5    Fernández Ríos, Lucía        11-4455-6677
+  N.° 1    Gómez, Laura                 11-4567-8901
+  N.° 2    Pereyra, Martín              11-5234-1122
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 3
+  1. Por apellido y nombre   2. Por fecha de alta
+Criterio: 2
+  5 clientes ordenados por fecha de alta (inserción, 4 comparaciones):
+  N.° 1    Gómez, Laura                 11-4567-8901
+  N.° 2    Pereyra, Martín              11-5234-1122
+  N.° 3    Benítez, Sofía               11-6012-3344
+  N.° 4    Fernández, Ricardo           11-3890-7788
+  N.° 5    Fernández Ríos, Lucía        11-4455-6677
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 4
+Patente a buscar: AH123XY
+  Encontrado: AH123XY - Peugeot 208 2023 (15.300 km al alta)
+  Titular:    Fernández Ríos, Lucía (tel. 11-4455-6677, lucia.fr@mail.com)
+  Comparaciones sobre 6 vehículos: búsqueda binaria 2 (lista ordenada por patente), búsqueda lineal 6 (lista sin ordenar).
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 4
+Patente a buscar: ZZ000ZZ
+  No hay un vehículo con la patente ZZ000ZZ.
+  Comparaciones sobre 6 vehículos: búsqueda binaria 3 (lista ordenada por patente), búsqueda lineal 6 (lista sin ordenar).
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 5
+Patente: AE123BC
+  Historial de AE123BC en ambas sedes (2 turnos):
+  05/10/2026 09:00  Sede Echeandía  Cambio de aceite y filtros       CONFIRMADO
+  21/09/2026 11:00  Sede Flores     Diagnóstico por escáner (OBD-II) ATENDIDO
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 6
+Número de cliente: 5
+  Datos actuales: Cliente N.° 5: Fernández Ríos, Lucía (tel. 11-4455-6677, lucia.fr@mail.com)
+Nuevo teléfono (Enter para conservar): 11-4455-0000
+Nuevo correo (Enter para conservar, - para borrar): 
+  Cliente N.° 5 actualizado: tel. 11-4455-0000, lucia.fr@mail.com
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 6
+Número de cliente: 5
+  Datos actuales: Cliente N.° 5: Fernández Ríos, Lucía (tel. 11-4455-0000, lucia.fr@mail.com)
+Nuevo teléfono (Enter para conservar): 
+Nuevo correo (Enter para conservar, - para borrar): rfernandez@mail.com
+  [!] Ya existe otro cliente registrado con el correo rfernandez@mail.com.
+  Resultado: los datos de contacto no se modificaron; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 1
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AH123XY
+  Vehículo: AH123XY - Peugeot 208 2023 (15.300 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 1
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 09:00
+Observaciones (opcional): Primer service
+  Turno N.° 7 CONFIRMADO
+  --------------------------------------------------
+  Turno N.° 7 - CONFIRMADO
+  Sede:      Sede Echeandía
+  Franja:    09/11/2026 09:00 a 10:00
+  Vehículo:  AH123XY - Peugeot 208 2023 (15.300 km al alta)
+  Servicio:  Cambio de aceite y filtros (60 min)
+  Obs.:      Primer service
+  --------------------------------------------------
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 2
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 09:30
+Observaciones (opcional): 
+  [S5] El horario no está disponible en Sede Echeandía: se superpone con el turno N.° 7 (09:00 a 10:00). Seleccione otro horario.
+  Primer horario libre ese día para este servicio: 10:00
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 2
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 2
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 09:30
+Observaciones (opcional): 
+  Turno N.° 8 CONFIRMADO
+  --------------------------------------------------
+  Turno N.° 8 - CONFIRMADO
+  Sede:      Sede Flores
+  Franja:    09/11/2026 09:30 a 10:30
+  Vehículo:  AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+  Servicio:  Alineación y balanceo (60 min)
+  --------------------------------------------------
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AD321JK
+  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 1
+Fecha (dd/mm/aaaa): 08/11/2026
+Hora (HH:mm): 10:00
+Observaciones (opcional): 
+  [!] El taller no atiende los domingos. Seleccione una fecha de lunes a sábado.
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AD321JK
+  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 3
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 19:00
+Observaciones (opcional): 
+  [!] Horario fuera de la franja de atención de la sede (08:00 a 20:00).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AD321JK
+  Vehículo: AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 11:00
+Observaciones (opcional): 
+  Turno N.° 9 CONFIRMADO
+  --------------------------------------------------
+  Turno N.° 9 - CONFIRMADO
+  Sede:      Sede Echeandía
+  Franja:    09/11/2026 11:00 a 11:30
+  Vehículo:  AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+  Servicio:  Diagnóstico por escáner (OBD-II) (30 min)
+  --------------------------------------------------
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 2
+Número de turno a reprogramar: 9
+  --------------------------------------------------
+  Turno N.° 9 - CONFIRMADO
+  Sede:      Sede Echeandía
+  Franja:    09/11/2026 11:00 a 11:30
+  Vehículo:  AD321JK - Fiat Cronos 2020 (52.900 km al alta)
+  Servicio:  Diagnóstico por escáner (OBD-II) (30 min)
+  --------------------------------------------------
+Nueva fecha (dd/mm/aaaa): 09/11/2026
+Nueva hora (HH:mm): 12:00
+  Turno N.° 9 reprogramado: 09/11/2026 12:00 a 12:30
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 3
+Número de turno a cancelar: 8
+  --------------------------------------------------
+  Turno N.° 8 - CONFIRMADO
+  Sede:      Sede Flores
+  Franja:    09/11/2026 09:30 a 10:30
+  Vehículo:  AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+  Servicio:  Alineación y balanceo (60 min)
+  --------------------------------------------------
+¿Confirma la cancelación? (S/N): S
+  Turno N.° 8 CANCELADO. La franja 09/11/2026 09:30 a 10:30 quedó disponible.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 4
+  Cancelación revertida: Turno N.° 8 CONFIRMADO
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 5
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Fecha (dd/mm/aaaa): 09/11/2026
+  Agenda del 09/11/2026 (2 turnos, ordenados por inserción):
+  09:00-10:00  N.° 7    AH123XY  Cambio de aceite y filtros   CONFIRMADO
+  12:00-12:30  N.° 9    AD321JK  Diagnóstico por escáner (OB… CONFIRMADO
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 6
+Número de turno: 7
+  --------------------------------------------------
+  Turno N.° 7 - CONFIRMADO
+  Sede:      Sede Echeandía
+  Franja:    09/11/2026 09:00 a 10:00
+  Vehículo:  AH123XY - Peugeot 208 2023 (15.300 km al alta)
+  Servicio:  Cambio de aceite y filtros (60 min)
+  Obs.:      Primer service
+  --------------------------------------------------
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 7
+Número de turno: 7
+  Llegada registrada. Turno N.° 7 (AH123XY) en la posición 1 de la cola.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 7
+Número de turno: 9
+  Llegada registrada. Turno N.° 9 (AD321JK) en la posición 2 de la cola.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 9
+  Cola de recepción (primero en llegar, primero en ser atendido):
+  1) Turno N.° 7 - AH123XY - Cambio de aceite y filtros
+  2) Turno N.° 9 - AD321JK - Diagnóstico por escáner (OBD-II)
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 8
+  Atendiendo Turno N.° 7 (AH123XY, Cambio de aceite y filtros) -> estado ATENDIDO
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 9
+  Cola de recepción (primero en llegar, primero en ser atendido):
+  1) Turno N.° 9 - AD321JK - Diagnóstico por escáner (OBD-II)
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 10
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Fecha (dd/mm/aaaa): 09/11/2026
+  Disponibilidad de Sede Echeandía el 09/11/2026: 3 de 24 franjas de 30 min ocupadas (13 %)
+  08:00 [   ][   ][  7][  7][   ][   ][   ][   ]
+  12:00 [  9][   ][   ][   ][   ][   ][   ][   ]
+  16:00 [   ][   ][   ][   ][   ][   ][   ][   ]
+  Referencias: [ n ] franja ocupada por el turno N.° n; [   ] franja libre.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 3
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 1
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 2
+  Servicios ordenados por precio base (quicksort):
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 38.000,00   60 min  cada 10.000 km
+   1. Cambio de aceite y filtros                $ 45.000,00   60 min  cada 10.000 km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 3
+  Servicios ordenados por duración (quicksort):
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 38.000,00   60 min  cada 10.000 km
+   1. Cambio de aceite y filtros                $ 45.000,00   60 min  cada 10.000 km
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 4
+  Próximo service estimado (referencia: kilometraje al alta):
+  AH123XY  Cambio de aceite y filtros         09/11/2026  ref.    15.300 km -> 25.300 km
+  AE123BC  Diagnóstico por escáner (OBD-II)   21/09/2026  ref.    86.500 km -> no depende del km
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 5
+  Servicios ordenados por precio base (quicksort):
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 38.000,00   60 min  cada 10.000 km
+   1. Cambio de aceite y filtros                $ 45.000,00   60 min  cada 10.000 km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+Número de servicio: 2
+  Servicio: Alineación y balanceo | precio actual $ 38.000,00
+Nuevo precio base (por ejemplo 52.000,00): 40.500
+  Precio actualizado: Alineación y balanceo -> $ 40.500,00
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 5
+  Servicios ordenados por precio base (quicksort):
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 40.500,00   60 min  cada 10.000 km
+   1. Cambio de aceite y filtros                $ 45.000,00   60 min  cada 10.000 km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+Número de servicio: 2
+  Servicio: Alineación y balanceo | precio actual $ 40.500,00
+Nuevo precio base (por ejemplo 52.000,00): -5
+  [!] Precio no válido. Use, por ejemplo, 52000 o 52.000,50.
+  Resultado: el precio no se modificó; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 4
+  Carga consolidada de turnos confirmados por sede:
+  Sede               Turnos    Minutos   Ingreso estimado
+  Sede Echeandía          3        270       $ 195.000,00
+  Sede Flores             3        210       $ 106.000,00
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 5
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 1
+Una fecha de la semana (dd/mm/aaaa): 09/11/2026
+  TALLERNET - Reporte semanal de carga (turnos no cancelados, ambas sedes)
+  Semana del 09/11/2026 al 14/11/2026
+  
+  Día        Fecha        Turnos  Minutos  Ingreso estimado       Echeandía          Flores
+  Lunes      09/11/2026        3      150      $ 115.500,00               2               1
+  Martes     10/11/2026        0        0            $ 0,00               0               0
+  Miércoles  11/11/2026        0        0            $ 0,00               0               0
+  Jueves     12/11/2026        0        0            $ 0,00               0               0
+  Viernes    13/11/2026        0        0            $ 0,00               0               0
+  Sábado     14/11/2026        0        0            $ 0,00               0               0
+  
+  Total: 3 turnos | Promedio diario: 0,5 | Ingreso estimado: $ 115.500,00
+  Día de mayor carga: Lunes (3 turnos) | Día de menor carga: Martes (0 turnos)
+  Días sin turnos: Martes, Miércoles, Jueves, Viernes, Sábado
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 2
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Fecha (dd/mm/aaaa): 09/11/2026
+  Agenda exportada: <prototipo>/evidencias_mac/salidas_testing/archivos_s14/exportaciones/agenda_echeandia_2026-11-09.csv
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 3
+Una fecha de la semana (dd/mm/aaaa): 09/11/2026
+  Reporte exportado: <prototipo>/evidencias_mac/salidas_testing/archivos_s14/exportaciones/reporte_semanal_2026-S46.txt
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 4
+Ruta del archivo CSV (nombre;apellido;telefono;email): ejemplos/clientes_ejemplo.csv
+  Líneas leídas: 6 | Registrados: 3 | Rechazados: 3
+  + Cliente N.° 6: Ferreyra, Agustina
+  + Cliente N.° 7: Núñez, Tomás
+  + Cliente N.° 9: Herrera, Julián
+  - Línea 4 (Benítez, Lucía): El teléfono debe tener entre 8 y 20 caracteres (dígitos, espacios, +, -, paréntesis).
+  - Línea 5 (Sosa, Ramiro): Ya existe un cliente registrado con ese correo electrónico.
+  - Línea 6: se esperaban 4 columnas y hay 3.
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 4
+Ruta del archivo CSV (nombre;apellido;telefono;email): ejemplos/no_existe.csv
+  [ARCHIVO] No existe el archivo ejemplos/no_existe.csv.
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: abc
+  [!] Ingrese un número entero válido.
+Elija una opción: 9
+  [!] Opción no válida. Elija un número del menú.
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 6
+
+----------------------------------------------------------------
+  SISTEMA
+----------------------------------------------------------------
+  1. Probar conexión con el servidor central
+  2. Ver las últimas operaciones (bitácora)
+  0. Volver
+Elija una opción: 2
+  Últimas operaciones registradas en <prototipo>/evidencias_mac/salidas_testing/archivos_s14/logs/tallernet.log:
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | ALTA_TURNO | Turno N.° 8 AE123BC 09/11/2026 09:30 a 10:30 en Sede Flores
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | ALTA_TURNO | Turno N.° 9 AD321JK 09/11/2026 11:00 a 11:30 en Sede Echeandía
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | REPROGRAMACION | Turno N.° 9 -> 09/11/2026 12:00 a 12:30
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | CANCELACION | Turno N.° 8
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | RECONFIRMACION | Turno N.° 8 (cancelación deshecha)
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | ATENCION | Turno N.° 7
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | MODIFICACION_PRECIO | Servicio N.° 2: 38000.00 -> 40500.00
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | ALTA_CLIENTE | Cliente N.° 6
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | ALTA_CLIENTE | Cliente N.° 7
+  2026-11-07 09:33:31 | Medina, Carla (sede 1) | ALTA_CLIENTE | Cliente N.° 9
+
+----------------------------------------------------------------
+  SISTEMA
+----------------------------------------------------------------
+  1. Probar conexión con el servidor central
+  2. Ver las últimas operaciones (bitácora)
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 0
+Sesión finalizada. ¡Hasta luego!

@@ -1,0 +1,15 @@
+== s01_cps05_E1_E4
+== s02_cps05_E5
+== s03_cps05_E6_E7
+== s04_robustez
+== s05_ordenamiento_busqueda
+== s06_cola_pila_reprogramacion
+== s07_catalogo_reportes
+== s09_actualizacion_excepciones
+== s10_arreglos_archivos
+== s08_volumen
+== s11_volumen_arreglos
+== s12_servidor_detenido
+== s13_credenciales_invalidas
+Salidas en <prototipo>/evidencias_mac/salidas_testing
+REGRESION OK -> <prototipo>/evidencias_mac/salidas_testing

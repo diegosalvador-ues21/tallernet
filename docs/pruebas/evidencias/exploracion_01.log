@@ -1,0 +1,1165 @@
+================================================================
+  TALLERNET - Talleres Ruiz Díaz | Gestión de turnos multi-sede
+================================================================
+Personal habilitado para registrar turnos:
+  1. Ruiz Díaz, Mario - Administrador (sede 1)
+  2. Medina, Carla - Recepcionista (sede 1)
+  3. Acosta, Julián - Recepcionista (sede 2)
+Ingrese su número de empleado: 2
+Sesión iniciada: Carla Medina (Recepcionista).
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción:  2 
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 99999999999
+  [!] Ingrese un número entero válido.
+Elija una opción: -1
+  [!] Opción no válida. Elija un número del menú.
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 2
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: 
+Apellido: Perez
+Teléfono: 11-4444-5555
+Correo electrónico (opcional): 
+  [!] El nombre es obligatorio.
+  Resultado: el cliente no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Apellido: Perez
+Teléfono: 11-4444-5555
+Correo electrónico (opcional): 
+  [!] El nombre no puede superar 60 caracteres.
+  Resultado: el cliente no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Ana
+Apellido: Paz
+Teléfono: 123
+Correo electrónico (opcional): 
+  [!] El teléfono debe tener entre 8 y 20 caracteres (dígitos, espacios, +, -, paréntesis).
+  Resultado: el cliente no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Ana
+Apellido: Paz
+Teléfono: 11-4444-5555
+Correo electrónico (opcional): ana@
+  [!] El correo electrónico no tiene un formato válido.
+  Resultado: el cliente no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Ana
+Apellido: Paz
+Teléfono: 11-4444-5555
+Correo electrónico (opcional): ANA.PAZ@MAIL.COM
+  Cliente N.° 5 registrado: Paz, Ana
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Robert'); DROP TABLE cliente;--
+Apellido: O'Brien
+Teléfono: 11-4444-6666
+Correo electrónico (opcional): 
+  Cliente N.° 6 registrado: O'Brien, Robert'); DROP TABLE cliente;--
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB-123-CD
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 1000
+  Vehículo N.° 6 registrado: AB123CD - Fiat Uno 2010 (1.000 km al alta)
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: ab 124 cd
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 1000
+  Vehículo N.° 7 registrado: AB124CD - Fiat Uno 2010 (1.000 km al alta)
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: A1
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 1000
+  [!] La patente debe tener el formato AB123CD o ABC123.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB125CD
+Marca: Fiat
+Modelo: Uno
+Año: 1949
+Kilometraje actual: 1000
+  [!] El año debe estar entre 1950 y 2027.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB126CD
+Marca: Fiat
+Modelo: Uno
+Año: 1950
+Kilometraje actual: 1000
+  Vehículo N.° 8 registrado: AB126CD - Fiat Uno 1950 (1.000 km al alta)
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB127CD
+Marca: Fiat
+Modelo: Uno
+Año: 2027
+Kilometraje actual: 1000
+  Vehículo N.° 9 registrado: AB127CD - Fiat Uno 2027 (1.000 km al alta)
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB128CD
+Marca: Fiat
+Modelo: Uno
+Año: 2028
+Kilometraje actual: 1000
+  [!] El año debe estar entre 1950 y 2027.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB129CD
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 2.000.000
+  Vehículo N.° 10 registrado: AB129CD - Fiat Uno 2010 (2.000.000 km al alta)
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB130CD
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 2000001
+  [!] El kilometraje debe estar entre 0 y 2000000 km.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB131CD
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 195,5
+  [!] El kilometraje debe ser un número entero.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB132CD
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: abc
+  [!] El kilometraje debe ser un número entero.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB133CD
+Marca: 
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 1000
+  [!] La marca es obligatorio.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB134CD
+Marca: Fiat
+Modelo: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Año: 2010
+Kilometraje actual: 1000
+  [!] El modelo no puede superar 60 caracteres.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 2
+Número de cliente: 1
+  Titular: N.° 1 Gómez, Laura
+Patente: AB135CD' OR '1'='1
+Marca: Fiat
+Modelo: Uno
+Año: 2010
+Kilometraje actual: 1000
+  [!] La patente debe tener el formato AB123CD o ABC123.
+  Resultado: el vehículo no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 4
+Patente a buscar: ab-123-cd
+  Encontrado: AB123CD - Fiat Uno 2010 (1.000 km al alta)
+  Titular:    Gómez, Laura (tel. 11-4567-8901, laura.gomez@mail.com)
+  Comparaciones sobre 10 vehículos: búsqueda binaria 3 (lista ordenada por patente), búsqueda lineal 6 (lista sin ordenar).
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 1
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 7:59
+Observaciones (opcional): 
+  [!] Horario fuera de la franja de atención de la sede (08:00 a 20:00).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 8
+Observaciones (opcional): 
+  [!] Formato de hora no válido (use HH:mm, entre 00:00 y 23:59).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 19:31
+Observaciones (opcional): 
+  [!] Horario fuera de la franja de atención de la sede (08:00 a 20:00).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 24:00
+Observaciones (opcional): 
+  [!] Formato de hora no válido (use HH:mm, entre 00:00 y 23:59).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 31/02/2026
+Hora (HH:mm): 10:00
+Observaciones (opcional): 
+  [!] Formato de fecha no válido (use dd/mm/aaaa).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09-11-2026
+Hora (HH:mm): 10:00
+Observaciones (opcional): 
+  [!] Formato de fecha no válido (use dd/mm/aaaa).
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 06/11/2026
+Hora (HH:mm): 10:00
+Observaciones (opcional): 
+  [!] La fecha y hora del turno no pueden ser anteriores al momento actual.
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 07/11/2026
+Hora (HH:mm): 08:00
+Observaciones (opcional): 
+  [!] La fecha y hora del turno no pueden ser anteriores al momento actual.
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 5
+Fecha (dd/mm/aaaa): 09/11/2026
+Hora (HH:mm): 19:30
+Observaciones (opcional): 
+  Turno N.° 7 CONFIRMADO
+  --------------------------------------------------
+  Turno N.° 7 - CONFIRMADO
+  Sede:      Sede Echeandía
+  Franja:    09/11/2026 19:30 a 20:00
+  Vehículo:  AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+  Servicio:  Diagnóstico por escáner (OBD-II) (30 min)
+  --------------------------------------------------
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 9
+  [?] No existe una sede activa con el número 9.
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 1
+Nuevo turno (CU001)
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 1
+Patente del vehículo: AE123BC
+  Vehículo: AE123BC - Volkswagen Gol Trend 2018 (86.500 km al alta)
+   5. Diagnóstico por escáner (OBD-II) (30 min)
+   2. Alineación y balanceo (60 min)
+   1. Cambio de aceite y filtros (60 min)
+   4. Diagnóstico de frenos (90 min)
+   3. Service completo 10.000 km (180 min)
+Servicio: 99
+  [?] No existe el servicio N.° 99.
+  Resultado: el turno no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 2
+Número de turno a reprogramar: 999
+  [?] No existe el turno N.° 999.
+  Resultado: el turno no se reprogramó; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 3
+Número de turno a cancelar: 999
+  [?] No existe el turno N.° 999.
+  Resultado: el turno no se canceló; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 4
+  [!] No hay cancelaciones para deshacer en esta sesión.
+  Resultado: la cancelación no se deshizo; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 6
+Número de turno: 999
+  [?] No existe el turno N.° 999.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 7
+Número de turno: 999
+  [?] No existe el turno N.° 999.
+  Resultado: la llegada no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 8
+  [!] La cola de recepción está vacía.
+  Resultado: no se registró la atención; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  TURNOS
+----------------------------------------------------------------
+  1. Nuevo turno
+  2. Reprogramar turno
+  3. Cancelar turno
+  4. Deshacer la última cancelación
+  5. Agenda de una sede por fecha
+  6. Buscar turno por número
+  7. Registrar llegada del vehículo (cola de recepción)
+  8. Atender siguiente vehículo de la cola
+  9. Ver cola de recepción
+ 10. Disponibilidad de una sede (grilla de franjas)
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 3
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 5
+  Servicios ordenados por precio base (quicksort):
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 38.000,00   60 min  cada 10.000 km
+   1. Cambio de aceite y filtros                $ 45.000,00   60 min  cada 10.000 km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+Número de servicio: 99
+  [?] No existe el servicio N.° 99.
+  Resultado: el precio no se modificó; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 5
+  Servicios ordenados por precio base (quicksort):
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 38.000,00   60 min  cada 10.000 km
+   1. Cambio de aceite y filtros                $ 45.000,00   60 min  cada 10.000 km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+Número de servicio: 1
+  Servicio: Cambio de aceite y filtros | precio actual $ 45.000,00
+Nuevo precio base (por ejemplo 52.000,00): 0
+  Precio actualizado: Cambio de aceite y filtros -> $ 0,00
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 5
+  Servicios ordenados por precio base (quicksort):
+   1. Cambio de aceite y filtros                     $ 0,00   60 min  cada 10.000 km
+   4. Diagnóstico de frenos                     $ 25.000,00   90 min  sin intervalo de km
+   5. Diagnóstico por escáner (OBD-II)          $ 30.000,00   30 min  sin intervalo de km
+   2. Alineación y balanceo                     $ 38.000,00   60 min  cada 10.000 km
+   3. Service completo 10.000 km               $ 120.000,00  180 min  cada 10.000 km
+Número de servicio: 1
+  Servicio: Cambio de aceite y filtros | precio actual $ 0,00
+Nuevo precio base (por ejemplo 52.000,00): 99999999999
+  [!] Precio no válido. Use, por ejemplo, 52000 o 52.000,50.
+  Resultado: el precio no se modificó; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  SEDES Y CATÁLOGO DE SERVICIOS
+----------------------------------------------------------------
+  1. Listar sedes
+  2. Listar servicios por precio
+  3. Listar servicios por duración
+  4. Próximo service estimado por kilometraje
+  5. Actualizar precio de un servicio
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 5
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 2
+  1. Sede Echeandía - Echeandía 3042, CABA (08:00 a 20:00)
+  2. Sede Flores - Av. Rivadavia 8450, Flores, CABA (08:00 a 20:00)
+Sede: 9
+Fecha (dd/mm/aaaa): 09/11/2026
+  [?] No existe una sede activa con el número 9.
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 4
+Ruta del archivo CSV (nombre;apellido;telefono;email): ../../../../etc/passwd
+  [ARCHIVO] No existe el archivo ../../../../etc/passwd.
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 4
+Ruta del archivo CSV (nombre;apellido;telefono;email): 
+  [!] Indique la ruta del archivo CSV.
+
+----------------------------------------------------------------
+  REPORTES SEMANALES Y ARCHIVOS
+----------------------------------------------------------------
+  1. Reporte semanal por día (ambas sedes)
+  2. Exportar agenda de una sede a CSV
+  3. Exportar reporte semanal a TXT
+  4. Importar clientes desde CSV
+  0. Volver
+Elija una opción: 0
+
+================================================================
+  MENÚ PRINCIPAL
+================================================================
+  1. Turnos
+  2. Clientes y vehículos
+  3. Sedes y catálogo de servicios
+  4. Reporte de carga por sede
+  5. Reportes semanales y archivos
+  6. Sistema
+  0. Salir
+Elija una opción: 2
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 1
+Nombre: Ana
+Apellido: 
+  [ERROR INTERNO] La operación no pudo completarse (EntradaFinalizadaException). Informe al administrador; puede continuar con otra opción.
+  Resultado: el cliente no se registró; no se guardó ningún dato.
+
+----------------------------------------------------------------
+  CLIENTES Y VEHÍCULOS
+----------------------------------------------------------------
+  1. Alta de cliente
+  2. Alta de vehículo
+  3. Listar clientes ordenados
+  4. Buscar vehículo por patente
+  5. Historial de un vehículo (ambas sedes)
+  6. Modificar datos de contacto de un cliente
+  0. Volver
+Elija una opción: 
+Fin de la entrada. Sesión cerrada.
